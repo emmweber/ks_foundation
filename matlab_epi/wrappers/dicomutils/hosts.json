@@ -1,0 +1,218 @@
+    {
+        "pacs": {
+            "description": "Hospital Sectra PACS",
+            "hostname": "pacs",
+            "ip": "10.140.150.171",
+            "aet": "SECTRA_ARKIV",
+            "dicomport": 9182,
+            "ESE": "N/A",
+            "nickname": []
+        },  
+        "pacs2": {
+            "description": "Hospital Sectra PACS via CarlImages",
+            "hostname": "pacs2",
+            "ip": "10.140.82.41",
+            "aet": "SECTRA_ARKIV",
+            "dicomport": 9188,
+            "ESE": "N/A",
+            "nickname": []
+        },           
+        "nmr1": {
+            "description": "Clinical 3T nmr1 (GKS)",
+            "hostname": "nmr1",
+            "ip": "136.155.138.51",
+            "aet": "NMR1",
+            "dicomport": 4006,
+            "ESE": "DV25.1_R02",
+            "nickname": []
+        },
+        "mrtarget": {
+            "description": "",
+            "hostname": "mrtarget",
+            "ip": "136.155.138.51",
+            "aet": "NMR1",
+            "dicomport": 4006,
+            "ESE": "DV26.0_R01",
+            "nickname": []
+        },
+        "mrqa": {
+            "description": "OsiriX for QA (located @ K2D8SMR009)",
+            "hostname": "mrqa",
+            "ip": "10.142.99.70",
+            "aet": "mrqa",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": []
+        },        
+        "nmr3": {
+            "description": "Clinical 1.5T nmr3 (GKS)",
+            "hostname": "nmr3",
+            "ip": "136.155.138.43",
+            "aet": "NMR3",
+            "dicomport": 4006,
+            "ESE": "DV25.0_R01",
+            "nickname": []
+        }, 
+        "nmr4": {
+            "description": "Clinical 1.5T nmr4 (GKS)",
+            "hostname": "nmr4",
+            "ip": "136.155.138.44",
+            "aet": "NMR4",
+            "dicomport": 4006,
+            "ESE": "HD23.0_V01",
+            "nickname": []
+        }, 
+        "nmr5": {
+            "description": "KI research 3T nmr5 (GKS)",
+            "hostname": "nmr5",
+            "ip": "136.155.138.45",
+            "aet": "NMR5",
+            "dicomport": 4006,
+            "ESE": "DV24.0_R01",
+            "nickname": []
+        }, 
+        "k2d8smr001": {
+            "description": "Clinical 1.5T bmr1.5 (NKS, childrens dept)",
+            "hostname": "k2d8smr001",
+            "ip": "10.142.52.17",
+            "aet": "K2D8SMR001",
+            "dicomport": 4006,
+            "ESE": "DV26.0_R01",
+            "nickname": ["bmr1.5"]
+        }, 
+        "k2d8smr002": {
+            "description": "Clinical 3T bmr3 (NKS, childrens dept)",
+            "hostname": "k2d8smr002",
+            "ip": "10.142.52.19",
+            "aet": "K2D8SMR002",
+            "dicomport": 4006,
+            "ESE": "DV26.0_R01",
+            "nickname": ["bmr3"]
+        }, 
+        "k2d8smr006": {
+            "description": "Clinical 3T nmr6 (NKS)",
+            "hostname": "k2d8smr006",
+            "ip": "10.142.52.139",
+            "aet": "K2D8SMR006",
+            "dicomport": 4006,
+            "ESE": "RX27.0_R01",
+            "nickname": ["nmr6", "ID32ID32"]
+        }, 
+        "k2d8smr007": {
+            "description": "Clinical 1.5T nmr7 (NKS)",
+            "hostname": "k2d8smr007",
+            "ip": "10.142.52.141",
+            "aet": "K2D8SMR007",
+            "dicomport": 4006,
+            "ESE": "DV26.0_R01",
+            "nickname": ["nmr7"]
+        }, 
+        "k2d8smr008": {
+            "description": "Clinical 3T nmr8 (NKS)",
+            "hostname": "k2d8smr008",
+            "ip": "10.142.52.143",
+            "aet": "K2D8SMR008",
+            "dicomport": 4006,
+            "ESE": "RX27.0_R01",
+            "nickname": ["nmr8"]
+        }, 
+        "k2d8smr009": {
+            "description": "Clinical 3T nmr9 (NKS)",
+            "hostname": "k2d8smr009",
+            "ip": "10.142.52.145",
+            "aet": "K2D8SMR009",
+            "dicomport": 4006,
+            "ESE": "RX27.0_R01",
+            "nickname": ["nmr9"]
+        }, 
+        "k2d8smr010": {
+            "description": "Clinical 1.5T nmr10 (NKS)",
+            "hostname": "k2d8smr010",
+            "ip": "10.142.52.147",
+            "aet": "K2D8SMR010",
+            "dicomport": 4006,
+            "ESE": "DV26.0_R01",
+            "nickname": ["nmr10"]
+        },
+        "mrimac": {
+            "description": "",
+            "hostname": "mrimac",
+            "ip": "10.142.99.30",
+            "aet": "mrimac",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": []
+        },
+        "hermes": {
+            "description": "",
+            "hostname": "hermes",
+            "ip": "10.142.99.29",
+            "aet": "hermes",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": []
+        },    
+        "pandora": {
+            "description": "",
+            "hostname": "pandora",
+            "ip": "10.142.99.17",
+            "aet": "hermes",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": []
+        },    
+        "rudy": {
+            "description": "",
+            "hostname": "rudy",
+            "ip": "136.155.138.50",
+            "aet": "rudy",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": []
+        },
+        "stefan": {
+            "description": "Stefans MacBook Pro Ethernet",
+            "hostname": "27zk.ks.sll.se",
+            "ip": "10.142.99.11",
+            "aet": "27zk",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": ["27zk"]
+        },
+        "stefanwifi": {
+            "description": "Stefans MacBook Pro WiFi",
+            "hostname": "27zk2.ks.sll.se",
+            "ip": "10.142.99.138",
+            "aet": "27zk2",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": ["27zk2"]
+        },
+        "ola": {
+            "description": "Olas iMac PRO",
+            "hostname": "pan3.ks.sll.se",
+            "ip": "10.142.99.19",
+            "aet": "Ola",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": []
+        },
+        "henric": {
+            "description": "Henrics datamaskin",
+            "hostname": "pan5.ks.sll.se",
+            "ip":"10.142.99.21",
+            "aet": "HENRIC",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": []
+        },
+        "johan": {
+            "description": "Johans iMac Pro",
+            "hostname": "pan6.ks.sll.se",
+            "ip": "10.142.99.22",
+            "aet": "johanimac",
+            "dicomport": 4006,
+            "ESE": "N/A",
+            "nickname": []
+        }
+    }

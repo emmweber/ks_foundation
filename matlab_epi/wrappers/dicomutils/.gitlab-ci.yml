@@ -1,0 +1,15 @@
+stages:
+  - check_syntax
+
+
+hosts.json:
+  stage: check_syntax
+  script:
+    - python -mjson.tool hosts.json > /dev/null
+  allow_failure: false
+
+dicomSender:
+  stage: check_syntax
+  script:
+    - python -m dicomSender
+  allow_failure: false

@@ -1,0 +1,41 @@
+Karolinska note:
+The legal text below contains the sharing terms set up by GE Healthcare for sharing of e.g. EPIC related source code between research customers.
+
+- By downloading this software YOU ARE AGREEING with the terms set by GE Healthcare below
+- GE Healthcare asks you to also to sign the Research Community Sharing License containing the wording below. Please contact: 
+  Kellie Tribbey <kellie.orndorff@med.ge.com> or Reed Busse <Reed.Busse@med.ge.com>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This Research Community Sharing Agreement (“Agreement”) is made by and between General Electric Company, acting through its GE Healthcare business, with a place of business at 3000 North Grandview Boulevard, Waukesha, WI 53188 (“GE Healthcare”), and Karolinska University Hospital, at Deptartment of Neuroradiology (“Institution”), is effective as of Sept 1st, 2016 (“Effective Date”).  All references to Institution include Institution’s employees, students, users, representatives, and agents.
+
+WHEREAS, Institution has a Research Key Access Agreement (a.k.a. Research Mode Limited License, Access Agreement) to enable GE Healthcare MR Equipment to be operated in “Research Mode”, and/or a Software Development Kit Usage Agreement (a.k.a. EPIC License, PET Toolbox License, etc.) to use certain GE software development tools to create Derivative Software;
+
+WHEREAS, Institution desires to share with other academic research institutions (distribute to and/or receive from) Derivative Software governed by  these agreements; 
+
+NOW THEREFORE, in accordance with the promises and covenants contained herein, the parties agree as follows:
+
+Purpose: Effective upon execution by the parties, GE Healthcare hereby agrees to provide limited permission for Institution to exchange Derivative Software with members of the GE Healthcare Research Community for research and education purposes.  
+
+“Derivative Software” is any software created in whole or in part by Licensee or another authorized party using GEHC’s EPIC, Orchestra or PET Toolbox software development toolkits (SDK).  It will also include software created by using another GEHC SDK if GEHC expressly designates in the relevant SDK license that such Derivative Software may be distributed under this Agreement.   
+
+“Member” is an institution that has currently has a valid, fully executed version of this Agreement and whose name is listed as a current member on the GEHC Research Community Website.
+“Distributor” is a Member that provides Derivative Software to another Member.
+“Recipient” is a Member that receives Derivative Software from another Member.
+
+Grant: GEHC hereby grants Licensee permission for Licensee to distribute Licensee-created Derivative Software with Recipients, and to Receive and to use Derivative Software from Distributors, all for academic research purposes only, subject to the following conditions: 
+1. Distribution by Licensee of Licensee-modified Derivative Software to a Recipient will grant an automatic, non-exclusive license to Recipient from Licensee (Distributor Member) to use  and modify (if source code is provided) the Derivative Software for research and education purposes only.  
+2. Licensee may provide executable Derivative Software to any Member, but Derivative Software in source code form may only be provided to Members that have a valid, relevant GEHC software development kit license (e.g. EPIC for pulse sequence software).
+3. Licensee will NOT distribute or otherwise disclose Derivative Software to any third party if such Derivative Software is a derivative work of GE work-in-progress (“WIP”) software, unless GEHC expressly consents in a separate written document.  
+4. Licensee hereby acknowledges and agrees that for any Derivative Software received from a Member or GEHC that the following terms will apply:
+   a) The Derivative Software has not been reviewed, nor received clearance for marketing from, the Food and Drug Administration or any other regulatory body; it is limited to investigational research use only in accordance with applicable Federal, state and other regulations.
+   b) The Derivative Software has not been reviewed, finished, tested, or approved by GEHC. 
+   c) The Derivative Software is derivative of GEHC proprietary materials; use by a Recipient remains subject to the terms and conditions of Recipient’s Research Mode Limited License, and (if source code is provided) the relevant software development kit license (e.g. EPIC software license).  
+   d) DERIVATIVE SOFTWARE IS PROVIDED AS-IS.  THE DISTRIBUTING MEMBER, GEHC, AND ITS AFFILIATES MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, OF ANY MANNER, INCLUDING MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR THAT THE USE OF THE SOFTWARE WILL NOT INFRINGE ANY PATENTS, COPYRIGHTS, TRADEMARKS, OR OTHER RIGHTS. THE DISTRIBUTING MEMBER, GEHC AND ITS AFFILIATES SHALL NOT BE LIABLE FOR ANY LIABILITY OR DAMAGES WITH RESPECT TO ANY CLAIM BY RECIPIENT OR ANY THIRD PARTY ON ACCOUNT OF, OR ARISING FROM, ANY LICENSE OR USE OF THE SOFTWARE.
+   e) Licensee will keep records that identify all Derivative Software distributed, the names of the relevant Recipients, and Licensee will provide a copy of these records to GEHC upon request.
+   f) Use of Derivative Software in human or animal research may require approval by an Ethics Committee and/or regulatory agencies. Recipient takes full responsibility for complying with all legal and regulatory requirements regarding human and animal subject research.  
+   g) DERIVATIVE SOFTWARE MAY NOT BE DISTRIBUTED UNDER ANY OTHER LICENSE TERMS WITHOUT THE EXPRESS WRITTEN PERMISSION OF GE. ATTEMPTS TO DISTRIBUTE UNDER ANY OTHER TERMS, INCLUDING OPEN SOURCE LICENSES (LIKE MIT, GPL, ETC.) WILL IMMEDIATELY VOID THIS AGREEMENT AND TERMINATE ALL LICENSES ISSUED THEREFROM.  
+5. Licensee hereby provides permission for GEHC to publish Licensee’s name on a membership list for the GEHC Research Community website.  This will provide notice to other members that Licensee has agreed to these terms and is able to share and receive Derivative Software.  
+6. GEHC reserves all rights other than those expressly provided to Licensee.
+
+Termination: This License and/or any license(s) to use Derivative Software provided by or to other Members may be terminated for any or no reason by GEHC effective upon providing written notice to the Licensee.  Further, this License and any licenses granted to other Members by Licensee to use Licensee-created Derivative Software may be terminated for any or no reason by Licensee, effective upon providing written notice to the relevant parties.

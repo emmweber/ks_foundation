@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['n_5frefoc',['N_Refoc',['../struct_k_s_i_n_v___p_a_r_a_m_s.html#a4eab9e6ed3f1bfffb575cbd617a6c4cf',1,'KSINV_PARAMS']]],
+  ['nacslines',['nacslines',['../struct_k_s___p_h_a_s_e_r.html#a4762b9a6307f0223b3d1dfde7e8ddce8',1,'KS_PHASER']]],
+  ['ndiffdirs',['ndiffdirs',['../ksepi__implementation__diffusion_8e.html#a5cf24490ea08afd90b2b66f3c33e5606',1,'ksepi_implementation_diffusion.e']]],
+  ['next',['next',['../struct_k_s___b_a_s_e.html#a75b19ffcca77bfc647ff02695958fd95',1,'KS_BASE']]],
+  ['nflairslices',['nflairslices',['../struct_k_s_i_n_v___p_a_r_a_m_s.html#a76c00ca60cd966806ee442a002e24cd1',1,'KSINV_PARAMS']]],
+  ['ngenerated',['ngenerated',['../struct_k_s___b_a_s_e.html#a48a67aa9525b1eaff08aa809b53110dc',1,'KS_BASE']]],
+  ['ninst',['ninst',['../struct_k_s___b_a_s_e.html#a72a22b96ff3908d2b9a20a3a02647a2f',1,'KS_BASE']]],
+  ['nover',['nover',['../struct_k_s___r_e_a_d_t_r_a_p.html#a29cf05caf131eb2c5915a41b18af16d0',1,'KS_READTRAP::nover()'],['../struct_k_s___r_e_a_d_w_a_v_e.html#a29cf05caf131eb2c5915a41b18af16d0',1,'KS_READWAVE::nover()'],['../struct_k_s___p_h_a_s_e_r.html#a29cf05caf131eb2c5915a41b18af16d0',1,'KS_PHASER::nover()'],['../struct_k_s___d_i_x_o_n___d_u_a_l_r_e_a_d_t_r_a_p.html#a29cf05caf131eb2c5915a41b18af16d0',1,'KS_DIXON_DUALREADTRAP::nover()']]],
+  ['npasses',['npasses',['../struct_k_s___s_l_i_c_e___p_l_a_n.html#a9cd9ebd93187231e5c4109d14c0dd69c',1,'KS_SLICE_PLAN']]],
+  ['nsa',['nsa',['../struct_k_s___d_i_x_o_n___d_u_a_l_r_e_a_d_t_r_a_p.html#a5389cedb3656ce0b1887cb2f9bd91576',1,'KS_DIXON_DUALREADTRAP']]],
+  ['nseqinstances',['nseqinstances',['../struct_k_s___s_e_q___c_o_n_t_r_o_l.html#a5af9f3a7de19e7493ce64776bd8f3556',1,'KS_SEQ_CONTROL']]],
+  ['nslices',['nslices',['../struct_k_s___s_l_i_c_e___p_l_a_n.html#a3414dc896f1276457707d70318d46770',1,'KS_SLICE_PLAN']]],
+  ['nslices_5fper_5fpass',['nslices_per_pass',['../struct_k_s___s_l_i_c_e___p_l_a_n.html#a3c4ea64a2a861da12849cb565afab129',1,'KS_SLICE_PLAN']]],
+  ['nslicesahead',['nslicesahead',['../struct_k_s_i_n_v___p_a_r_a_m_s.html#ac40805e95e77104a3bc7e489a46c68bb',1,'KSINV_PARAMS']]],
+  ['num_5fshots',['num_shots',['../struct_k_s___p_h_a_s_e_e_n_c_o_d_i_n_g___p_l_a_n.html#aa2f98be84137da8386df3fc88763823c',1,'KS_PHASEENCODING_PLAN']]],
+  ['numacq',['numacq',['../struct_k_s___g_r_a_d_r_f_c_t_r_l.html#abe25ffea5925df8869e60f527ce583b4',1,'KS_GRADRFCTRL']]],
+  ['numinstances',['numinstances',['../struct_k_s___i_s_i_r_o_t.html#aa571b5a96556f71c84be339d2e9193b4',1,'KS_ISIROT']]],
+  ['numlinestoacq',['numlinestoacq',['../struct_k_s___p_h_a_s_e_r.html#a09b1a7dc77a7cf8c4e8421a23608a42a',1,'KS_PHASER']]],
+  ['numrf',['numrf',['../struct_k_s___g_r_a_d_r_f_c_t_r_l.html#ad1471d1cbc5ed7e8b1bc9d0987bf6eed',1,'KS_GRADRFCTRL']]],
+  ['numseq',['numseq',['../struct_k_s___s_e_q___c_o_l_l_e_c_t_i_o_n.html#a65c4aa433169274a52c448793e82e12e',1,'KS_SEQ_COLLECTION']]],
+  ['numtrap',['numtrap',['../struct_k_s___g_r_a_d_r_f_c_t_r_l.html#a576774535b3b72525cf3821a0ded5124',1,'KS_GRADRFCTRL']]],
+  ['numwave',['numwave',['../struct_k_s___g_r_a_d_r_f_c_t_r_l.html#a176c1433ab0ff244ebdc3806d77fc3c9',1,'KS_GRADRFCTRL']]]
+];

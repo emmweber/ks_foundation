@@ -1,0 +1,27 @@
+var grad__rf__empty_8globals_8h =
+[
+    [ "KSRF00_SLOT", "grad__rf__empty_8globals_8h.html#ab0420376eb149fa8bd8f98b1d535f988", null ],
+    [ "KSRF01_SLOT", "grad__rf__empty_8globals_8h.html#ac76bc0d46d222583c696b1e47cba9fbf", null ],
+    [ "KSRF02_SLOT", "grad__rf__empty_8globals_8h.html#ac1a83b27bacf13a3688c3368c1e87487", null ],
+    [ "KSRF03_SLOT", "grad__rf__empty_8globals_8h.html#a17e8a7214810800763b4c49967dcc728", null ],
+    [ "KSRF04_SLOT", "grad__rf__empty_8globals_8h.html#a67c9106572e02267623520ad2621e11c", null ],
+    [ "KSRF05_SLOT", "grad__rf__empty_8globals_8h.html#aba9ce33dada45f576a68311c16846d9f", null ],
+    [ "KSRF06_SLOT", "grad__rf__empty_8globals_8h.html#aa5d1f7fbc356ced042b48111d5a14c75", null ],
+    [ "KSRF07_SLOT", "grad__rf__empty_8globals_8h.html#aab088dbd44668b39eefc214dc1a2ed75", null ],
+    [ "KSRF08_SLOT", "grad__rf__empty_8globals_8h.html#a3e4957857ebd66f5a8c8dc6eb10eaa1d", null ],
+    [ "KSRF09_SLOT", "grad__rf__empty_8globals_8h.html#a21db15ff937027f52c54ac29edfaff7a", null ],
+    [ "KSRF10_SLOT", "grad__rf__empty_8globals_8h.html#a99342da46e957c16347c855a9078db82", null ],
+    [ "KSRF11_SLOT", "grad__rf__empty_8globals_8h.html#a68e23d81ff8eda4cb6ad2abbeb50dad3", null ],
+    [ "KSRF12_SLOT", "grad__rf__empty_8globals_8h.html#a0a8ff64db79a0e9e0b18d27b29900737", null ],
+    [ "KSRF13_SLOT", "grad__rf__empty_8globals_8h.html#a0a0fc8a607c2f347bc886454838775e4", null ],
+    [ "KSRF14_SLOT", "grad__rf__empty_8globals_8h.html#af2d75941cf1288d7988d1271b9b0a7e8", null ],
+    [ "KSRF15_SLOT", "grad__rf__empty_8globals_8h.html#ae7221887a7e1cb0a06fd1c0978f66fe6", null ],
+    [ "KSRF16_SLOT", "grad__rf__empty_8globals_8h.html#acc3d2978110f6a5cafd287ddd936cd9d", null ],
+    [ "KSRF17_SLOT", "grad__rf__empty_8globals_8h.html#af945cd05f3d9d63b630ddc62b7c0aab3", null ],
+    [ "KSRF18_SLOT", "grad__rf__empty_8globals_8h.html#a30c1ce7d14bcb8e1e39845bd0be26dac", null ],
+    [ "KSRF19_SLOT", "grad__rf__empty_8globals_8h.html#ac25477b3a947c3cdc3985fee82e385fa", null ],
+    [ "RF_FREE1", "grad__rf__empty_8globals_8h.html#ad9d5531cc0a27a5dc45fdad79358625a", null ],
+    [ "GX_FREE", "grad__rf__empty_8globals_8h.html#a660a0d7fd91c3b4c62fd7c0d9a7170a4", null ],
+    [ "GY_FREE", "grad__rf__empty_8globals_8h.html#acc540319d5cf8343dff6bd6d024137b9", null ],
+    [ "GZ_FREE", "grad__rf__empty_8globals_8h.html#a2d2cb0155c5158087fb72eeaea82d642", null ]
+];

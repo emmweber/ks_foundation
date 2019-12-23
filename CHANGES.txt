@@ -1,0 +1,82 @@
+Changes in KSFoundation 15 Feb 2019
+===================================
+
+* Support for RX27_R03 and PX26.1_R01
+* ksepi: 3D mode now uses ARC button for acceleration
+* ksepi: New ksepi_protocols.pdf for updated suggestions on how to scan diffusion, T1w 3D-EPI, SWI 3D-EPI
+* ksepi online recon: Now there is a way to create your own RPM install files (containing psd + matlab recon)
+  This is done via matlab-epi/deploy/rpmbuild/build_RPM_ksepi.sh. Also note that the top-level son-of-recon
+	script is in matlab-epi/deploy/ksepi/recon/recon_epi_live.sh. build_RPM_ksepi.sh will use one ksepi psd directory
+	as input argument to compile your version of ksepi and use the content of matlab-epi to create RPM files in
+	matlab-epi/deploy/rpmbuild/RPMS/. Please also see http://bit.ly/ksepi_RPM for more information, where one can
+	download ready made RPMs for various ESE releases.
+
+
+Changes in KSFoundation 20 Dec 2018
+===================================
+
+* Sequence plotting updated (new args for ks_plot_slicetime, new function ks_plot_slicetime_endofslicegroup())
+* Karolinska RF pulses: KSFoundation_KSRF.h
+* ksepi.e:
+    - 3D now works well. Now select 3D->Gradient Echo->Fast SPGR and type in PSD name. Don't select EchoPlanar for 3D (but for 2D)
+    - Flowcomp in phase + slice (ksepi_fcy, ksepi_fcz). Activated via FlowComp button in UI
+    - SWI (3D): ksepi_swi_returnmode (opuser7) controls SWI recon and what to return
+    - Acceleration CVs (3D): ksepi_ky_R, ksepi_kz_R (set via opusers). Note that multishot, undersampling is bit complicated in nature, especially for 3D
+    - New SPSP RF pulses for 3D (see ksepi_eval_setuprf_3dexc)
+    - Freq L/R is now better controlled for axial scans when copy/paste Rx
+    - Diffusion gradient amp optimized for SIGNA Premier. User can toggle SuperG to trade off between TE and TR
+* ksgre.e:
+    - Flowcomp in read + slice (ksepi_fcy, ksepi_fcz). Activated via FlowComp button in UI
+
+* matlab_epi:
+    - 2D and 3D recon now split up in recon_2Depi.m and recon_3Depi.m. Still call recon_epi.m in all cases
+    - PURE support works well for both 2D and 3D. Please select on MR scanner
+    - PhaseFOV < 1.0 now works with proper aspect ratio
+    - Recon speed improved for recon_epi.m
+    
+
+
+Changes in KSFoundation Oct2018
+===============================
+
+* KSFoundation psds can be compiled on DV24, MP24, DV25, DV26, MP26 and RX27R02 (for RX27R01, contact us)
+* ksepi.e, ksfse.e and ksgre.e now supports 2D and 3D imaging modes, and all with multiphase (4D)
+* New interactive HTML plotting on HOST (i.e. before download and potential hardware issues arise, like e.g. gradient overlaps). See documentation for more info
+* New looping structure using KS_PHASEENCODING_PLAN. Please take the time to read the updated documentation and look for the string "generate"
+  in the sequences.
+* ksfse.e: Reduction of SAR (search for CV ksfse_vfa)
+* ksepi.e: Some testing done to make the ksepi to run well and fast on Signa Premier. Note that diffusion gradients are capped at 50 mT/m to avoid
+  adding TR for cooling. Increasing the diffusion gradients to 70 mT/m or for higher b-values than 1000 s/mm2, please add about 1 second to minimum TR manually for now
+	on Signa Premier. More optimal handling of gradient heating for Preimer for all cases to come.
+* matlab_epi (please use Matlab 2016b+): 
+  - Updated to support 2D and 3D EPI, as well as FLEET calibration
+	- New folder "edu". Not related to acquisition or recon, but contains two interactive tools when teaching MRI (kspace_explorer and mrcontrast_explorer)
+  - New folder "wrappers", containing python script recon_ksepi.py, which can be used as a son-of-recon script on a linux computer (requires Matlab 2016b+ installed)
+	- dicom folder: dcm_send.m, dcm_write.m etc
+
+
+Changes in KSFoundation Dec2017
+===============================
+
+* Better DV26 support. RX27 (Premier 3T) support. Now KSFoundation psds can be compiled on DV24, MP24, DV25, DV26, MP26 and RX27EB
+* ksepi:
+  - DV26+: As GE now have changed to Orchestra recon, ksepi data cannot reconstruct using GE's online recon.
+	         To reconstruct ksepi data, a new matlab_epi folder is available
+	- rowflip will only be performed for online GE recon (pre DV26). Both Pfiles and ScanArchives have non-rowflipped EPI data
+	- Single Pfile (multi volumes in one Pfile). No more 512 image limitation
+	- User CV to choose what diffusion maps to write
+	- Multivolume (non-diffusion) now controlled by "Multiphase" checkbox
+	- Multishot mode: As a replacement to ASSET, ksepi offers multishot modes, with options to undersample all data, all but
+	  first volume or the b0 volumes, or to do all volumes as multishot. recon_epi.m handles this and performes GRAPPA calibration
+		to synthesize undersampled data. (CV: ksepi_multishot_control)
+* matlab_epi: Call epi/recon_epi.m to reconstruct both GE EPI data (epi.e and epi2.e) as well as ksepi.e data. This should
+  be compatible with single/multishot, ASSET (GE), and with multishot b0 calibration, partial Fourier. It is also able to reconstruct
+	multiple b-values from ksepi in tensor mode
+* ksfse:
+  - MinTR/MaxTR range in auto mode across T2, T1-FLAIR, T2-FLAIR
+  - Better RF stretching and adaptation for lowSAR modes
+	- T1FLAIR/T2FLAIR button handling (moved in DV26)
+* KSInversion: Support for new KSINV_FLAIR_T2PREP_BLOCK inversion mode (T2-prepped T2-FLAIR). Less use of global CVs and structs
+  for functions
+*  KS_SEQ_COLLECTION seqcollection; Now declared in @host for all psds. Now also used for sequence plotting
+

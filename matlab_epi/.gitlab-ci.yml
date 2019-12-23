@@ -1,0 +1,137 @@
+stages:
+  - deploy_pre_recon
+  - pull_reconci
+  - recon_epi
+  - deploy_post_recon
+
+.deploy_hermes_pandora: &deploy_hermes_pandora
+  script:
+    - echo "Deploying hermes..."
+    - ssh hermes "mkdir -p ${DEPLOY_PATH}"
+    - echo "Fetching matlab2 repo at ${DEPLOY_PATH}"
+    - ssh hermes "git -C ${DEPLOY_PATH} fetch --all || git clone git@hollandaise:/neuro/matlab2.git ${DEPLOY_PATH}"
+    - ssh hermes "cd ${DEPLOY_PATH}; git submodule init; git submodule update"
+    - echo "Checking out ${CI_COMMIT_REF_NAME}"
+    - ssh hermes "cd ${DEPLOY_PATH}; git reset --hard HEAD; git clean -df"
+    - ssh hermes "cd ${DEPLOY_PATH}; git checkout ${CI_COMMIT_REF_NAME}; git pull; git submodule update"
+    - echo "Deploying pandora..."
+    - ssh pandora "mkdir -p ${DEPLOY_PATH}"
+    - echo "Fetching matlab2 repo at ${DEPLOY_PATH}"
+    - ssh pandora "git -C ${DEPLOY_PATH} fetch --all || git clone git@hollandaise:/neuro/matlab2.git ${DEPLOY_PATH}"
+    - ssh pandora "cd ${DEPLOY_PATH}; git submodule init; git submodule update"
+    - echo "Checking out ${CI_COMMIT_REF_NAME}"
+    - ssh pandora "cd ${DEPLOY_PATH}; git reset --hard HEAD; git clean -df"
+    - ssh pandora "cd ${DEPLOY_PATH}; git checkout ${CI_COMMIT_REF_NAME}; git pull; git submodule update"
+
+deploy_cowboy:
+  <<: *deploy_hermes_pandora
+  stage: deploy_pre_recon
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+    DEPLOY_PATH: /recon/cowboy/${GITLAB_USER_LOGIN}/matlab2
+  allow_failure: true
+  except: 
+    - master
+    - dev
+
+deploy_master:
+  <<: *deploy_hermes_pandora
+  stage: deploy_post_recon
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+    DEPLOY_PATH: /recon/master/matlab2
+  allow_failure: false
+  only:
+    - master
+
+deploy_dev:
+  <<: *deploy_hermes_pandora
+  stage: deploy_pre_recon
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+    DEPLOY_PATH: /recon/dev/matlab2
+  allow_failure: false
+  only:
+    - dev
+
+pull_reconci:
+  stage: pull_reconci
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+  script:
+    - echo ${PWD}
+    - cd ../reconci
+    - CIROOT=${PWD}
+    - echo ${CIROOT}
+    - git submodule init
+    - git submodule update
+    - git reset --hard master
+    - git clean -df
+    - git checkout master
+    - git pull
+  allow_failure: false
+
+.reconepijob: &reconepijob
+  stage: recon_epi
+  script: &recon_epi_script
+    - echo ${HOSTNAME}
+    - echo ${GITLAB_USER_LOGIN}
+    - echo ${PWD}
+    - RECONROOT=${PWD}
+    - GITSHA="$(git rev-parse --short HEAD)"
+    - cd ../reconci
+    - CIROOT=${PWD}
+    - echo ${CIROOT}
+    - cd ${CIROOT}/${DATAPATH}
+    - ${RECONROOT}/wrappers/recon_ksepi.py --parallel 0 --moco ${MOCO} --swi ${SWI}
+    - cd matlabDicoms
+    - ${RECONROOT}/wrappers/dicomutils/dicomSender.py ${GITLAB_USER_LOGIN} --CI "CI epi" "${DATAPATH}" ${GITSHA} "${CI_COMMIT_REF_NAME}"
+  allow_failure: false
+  
+DW1sh:
+  <<: *reconepijob
+  variables: 
+    GIT_SUBMODULE_STRATEGY: normal
+    DATAPATH: ksepi/20180924_k2d8smr008_e50153_s00002_ksepiDW1sh96
+    MOCO: 0
+    SWI: 0
+
+DW3sh6dirFL1ref:
+  <<: *reconepijob
+  variables: 
+    GIT_SUBMODULE_STRATEGY: normal
+    DATAPATH: ksepi/20180924_k2d8smr008_e50153_s00022_ksepiDW3sh6dirFL1ref
+    MOCO: 0
+    SWI: 0
+
+DW3sh25dirMotion:
+  <<: *reconepijob
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+    DATAPATH: ksepi/20180914_k2d8smr010_e00031_s00012_ksepiDW3sh6dir
+    MOCO: 1
+    SWI: 0
+
+SE8sh6ec:
+  <<: *reconepijob
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+    DATAPATH: ksepi/20180925_k2d8smr008_e50154_s00011_ksepiSE8sh6ec
+    MOCO: 0
+    SWI: 0
+
+GE4sh4ecmph10:
+  <<: *reconepijob
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+    DATAPATH: ksepi/20180925_k2d8smr008_e50154_s00021_ksepiGE4sh4ecmph10
+    MOCO: 0
+    SWI: 0
+
+3D1shsl60:
+  <<: *reconepijob
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+    DATAPATH: ksepi/20180925_k2d8smr008_e50154_s00023_ksepi3D1shsl60
+    MOCO: 0
+    SWI: 1

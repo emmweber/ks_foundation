@@ -1,0 +1,94 @@
+
+KS_READTRAP (read):
+fov: 500
+res: 256
+rampsampling: 0
+nover: 0
+acqdelay: 20
+area2center: 602.747
+time2center: 4116
+read.echo.duration: 8192
+read.echo.rbw: 15.625
+read.echo.filt.decimation: 16
+read.echo.filt.tdaq: 8192
+read.echo.filt.bw: 15.625
+read.echo.filt.tsp: 32
+read.echo.filt.outputs: 256
+read.echo.filt.prefills: 0
+read.echo.filt.taps: -1
+read.amp: 0.146797
+read.ramptime: 20
+read.plateautime: 8192
+read.duration: 8232
+read.area: 1205.49
+readdephaser.amp: -2.09287
+readdephaser.ramptime: 280
+readdephaser.plateautime: 8
+readdephaser.duration: 568
+readdephaser.area: -602.747
+
+KS_PHASER (phaseenc):
+fov: 500
+res: 128
+nover: 0
+R: 1
+nacslines: 0
+areaoffset: 0
+numlinestoacq: 128
+phaseenc.amp: 1.46221
+phaseenc.ramptime: 196
+phaseenc.plateautime: 8
+phaseenc.duration: 400
+phaseenc.area: 298.291
+spoiler.amp: 2.09375
+spoiler.ramptime: 280
+spoiler.plateautime: 8
+spoiler.duration: 568
+spoiler.area: 603
+
+KS_SELRF(rfexc):
+slthick: 5.55556
+rfexc.trap.amp: 1.54905
+rfexc.trap.ramptime: 204
+rfexc.trap.plateautime: 3200
+rfexc.trap.duration: 3608
+rfexc.trap.area: 5272.95
+rfexc.reph.amp: -2.46936
+rfexc.reph.ramptime: 332
+rfexc.reph.plateautime: 8
+rfexc.reph.duration: 672
+rfexc.reph.area: -839.583
+
+KS_RF (rfexc):
+GE RF pulse: rf3dfgre.rho
+role: KS_RF_ROLE_EXC
+rfwave.res: 320
+rfwave.duration: 3200
+amp: 0.728411
+flip: 5
+bw: 3664
+cf_offset: 0
+start2iso: 2760
+iso2end: 440
+     rfpulse.pw: 3200
+     rfpulse.amp: 0.728411
+     rfpulse.abswidth: 0.1878
+     rfpulse.effwidth: 0.1005
+     rfpulse.area: 0.0949
+     rfpulse.dtycyc: 0.2633
+     rfpulse.maxpw: 0.2132
+     rfpulse.num: 1
+     rfpulse.max_b1: 0.0644207
+     rfpulse.max_int_b1_sq: 0.001335
+     rfpulse.max_rms_b1: 0.02043
+     rfpulse.nom_fa: 30
+     rfpulse.act_fa: 5
+     rfpulse.nom_pw: 3200
+     rfpulse.nom_bw: 3664
+     rfpulse.activity: 104
+     rfpulse.isodelay: 440
+     rfpulse.scale: 1
+     rfpulse.res: 320
+     rfpulse.extgradfile: 0
+     rfwave: Waveform assigned
+     thetawave: OFF

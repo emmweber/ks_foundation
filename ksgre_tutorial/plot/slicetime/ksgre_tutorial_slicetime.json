@@ -1,0 +1,2094 @@
+{
+"metadata": {
+	"psdname": "ksgre_tutorial",
+	"optr": 400000,
+	"pitscan": 52000000
+},
+"passes": [ {
+	"slicegroups": [
+	[{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 132,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre dummy TR"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 133,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre dummy TR"
+	}]],
+	"passmode": "KS_PLOT_PASS_WAS_DUMMY"
+	},{
+	"slicegroups": [
+	[{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 134,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 135,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 136,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 137,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 138,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 139,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 140,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 141,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 142,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 143,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 144,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 145,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 146,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 147,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 148,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 149,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 150,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 151,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 152,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 153,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 154,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 155,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 156,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 157,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 158,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 159,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 160,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 161,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 162,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 163,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 164,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 165,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 166,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 167,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 168,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 169,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 170,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 171,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 172,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 173,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 174,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 175,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 176,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 177,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 178,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 179,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 180,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 181,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 182,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 183,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 184,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 185,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 186,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 187,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 188,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 189,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 190,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 191,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 192,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 193,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 194,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 195,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 196,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 197,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 198,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 199,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 200,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 201,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 202,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 203,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 204,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 205,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 206,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 207,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 208,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 209,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 210,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 211,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 212,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 213,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 214,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 215,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 216,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 217,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 218,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 219,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 220,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 221,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 222,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 223,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 224,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 225,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 226,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 227,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 228,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 229,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 230,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 231,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 232,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 233,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 234,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 235,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 236,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 237,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 238,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 239,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 240,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 241,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 242,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 243,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 244,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 245,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 246,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 247,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 248,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 249,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 250,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 251,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 252,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 253,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 254,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 255,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 256,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 257,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 258,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 259,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 260,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}],[
+	{},
+	{
+		"description": "ksgremain",
+		"excitationmode": "KS_PLOT_STANDARD",
+		"duration": 400.000,
+		"nseqinstances": 261,
+		"minduration": 33.216,
+		"numrf": 1,
+		"numtrap": 6,
+		"numwave": 0,
+		"numacq": 1,
+		"slicethickness": 5.000,
+		"slicepos": [-0.000]
+	},{
+	"groupdescription": "ksgre line"
+	}]],
+	"passmode": "KS_PLOT_PASS_WAS_STANDARD"
+	}]
+}

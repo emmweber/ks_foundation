@@ -1,0 +1,7 @@
+[submodule "wrappers/dicomutils"]
+	path = wrappers/dicomutils
+	url = ../dicom.git
+	ignore = dirty
+	update = checkout
+	branch = master
+	fetchrecursesubmodules = true

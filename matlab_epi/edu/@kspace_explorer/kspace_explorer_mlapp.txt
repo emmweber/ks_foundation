@@ -1,0 +1,905 @@
+classdef kspace_explorer < matlab.apps.AppBase
+
+    % Properties that correspond to app components
+    properties (Access = public)
+        kspaceExplorer                 matlab.ui.Figure
+        UI_kspace                      matlab.ui.control.UIAxes
+        FOVxSliderLabel                matlab.ui.control.Label
+        FOVxSlider                     matlab.ui.control.Slider
+        KspaceExplorerLabel            matlab.ui.control.Label
+        FOVkySliderLabel               matlab.ui.control.Label
+        FOVkySlider                    matlab.ui.control.Slider
+        FOVySliderLabel                matlab.ui.control.Label
+        FOVySlider                     matlab.ui.control.Slider
+        UI_kspace_zoom                 matlab.ui.control.UIAxes
+        FOVkxSliderLabel               matlab.ui.control.Label
+        FOVkxSlider                    matlab.ui.control.Slider
+        UI_ispace                      matlab.ui.control.UIAxes
+        UI_ispace_zoom                 matlab.ui.control.UIAxes
+        KspacedisplayButtonGroup       matlab.ui.container.ButtonGroup
+        kMagnitudeButton               matlab.ui.control.RadioButton
+        kPhaseButton                   matlab.ui.control.RadioButton
+        kMagPhaseButton                matlab.ui.control.RadioButton
+        kRealButton                    matlab.ui.control.RadioButton
+        kImagButton                    matlab.ui.control.RadioButton
+        ImagedisplayButtonGroup        matlab.ui.container.ButtonGroup
+        MagnitudeButton                matlab.ui.control.RadioButton
+        PhaseButton                    matlab.ui.control.RadioButton
+        MagPhaseButton                 matlab.ui.control.RadioButton
+        RealButton                     matlab.ui.control.RadioButton
+        ImagButton                     matlab.ui.control.RadioButton
+        TabGroup                       matlab.ui.container.TabGroup
+        DataselectionTab               matlab.ui.container.Tab
+        ChooseimageLabel               matlab.ui.control.Label
+        ChooseimageDropDown            matlab.ui.control.DropDown
+        PhaseEncodingdirButtonGroup    matlab.ui.container.ButtonGroup
+        PhaseEncodingVerticalButton    matlab.ui.control.ToggleButton
+        PhaseEncodingHorizontalButton  matlab.ui.control.ToggleButton
+        ReconstructionoptionsTab       matlab.ui.container.Tab
+        AddnoiseLabel                  matlab.ui.control.Label
+        AddnoiseKnob                   matlab.ui.control.Knob
+        UsezerofillCheckBox            matlab.ui.control.CheckBox
+        UseFermiCheckBox               matlab.ui.control.CheckBox
+        ParallelimagingTab             matlab.ui.container.Tab
+        AccelerationfactorRKnobLabel   matlab.ui.control.Label
+        accelerationFactorRKnob        matlab.ui.control.DiscreteKnob
+        kycenterstripSliderLabel       matlab.ui.control.Label
+        kycenterstripSlider            matlab.ui.control.Slider
+        ApplyGRAPPAweightsLabel        matlab.ui.control.Label
+        ApplyGRAPPAweightsSwitch       matlab.ui.control.ToggleSwitch
+        InformationPanel               matlab.ui.container.Panel
+        ScanTimeLabel                  matlab.ui.control.Label
+        RelativeSNRLabel               matlab.ui.control.Label
+        acqMatrixSizeLabel             matlab.ui.control.Label
+        recMatrixSizeLabel             matlab.ui.control.Label
+        SNRefficiencyLabel             matlab.ui.control.Label
+        AuthorTextArea                 matlab.ui.control.TextArea
+        WindowLevelPanel               matlab.ui.container.Panel
+        WSliderLabel                   matlab.ui.control.Label
+        imageWindow                    matlab.ui.control.Slider
+        LSliderLabel                   matlab.ui.control.Label
+        imageLevel                     matlab.ui.control.Slider
+        kWindowLevelPanel              matlab.ui.container.Panel
+        WSlider_2Label                 matlab.ui.control.Label
+        kspaceWindow                   matlab.ui.control.Slider
+        LSlider_2Label                 matlab.ui.control.Label
+        kspaceLevel                    matlab.ui.control.Slider
+        showOriginalCheckBox           matlab.ui.control.CheckBox
+        kycropModeSwitch               matlab.ui.control.Switch
+        CalculationstatusLampLabel     matlab.ui.control.Label
+        CalculationstatusLamp          matlab.ui.control.Lamp
+        kspace1mLabel                  matlab.ui.control.Label
+        imagemLabel                    matlab.ui.control.Label
+        kxcropModeSwitch               matlab.ui.control.Switch
+        ReconMethodButtonGroup         matlab.ui.container.ButtonGroup
+        iFFTButton                     matlab.ui.control.ToggleButton
+        HomodyneButton                 matlab.ui.control.ToggleButton
+        CouldnotfindTextAreaLabel      matlab.ui.control.Label
+        CouldnotfindTextArea           matlab.ui.control.TextArea
+        QuitButton                     matlab.ui.control.StateButton
+    end
+
+
+    properties (Access = private)
+        imageData = [];
+        kspaceData = [];
+        imagePixelSize = [1 1];
+        kspacePixelSize = [1 1];
+        acqMatrix = [];
+        grappaWeights = [];
+        imageDataMenu = [];
+        fullDataSize = [];
+        phaseEncodingPercentage = 100;
+        UI_ispace_DefaultPosition = [];
+        UI_kspace_DefaultPosition = [];
+        UI_ispace_zoom_DefaultPosition = [];
+        UI_kspace_zoom_DefaultPosition = [];        
+        effR = 1;
+    end    
+    
+
+    methods (Access = private)
+
+        % Code that executes after component creation
+        function startupFcn(app)
+            
+            app.lampInProgress('Starting up...');
+            app.UI_ispace_DefaultPosition = app.UI_ispace.Position;
+            app.UI_kspace_DefaultPosition = app.UI_kspace.Position;
+            app.UI_ispace_zoom_DefaultPosition = app.UI_ispace_zoom.Position;
+            app.UI_kspace_zoom_DefaultPosition = app.UI_kspace_zoom.Position;           
+
+            [mfilepth,fname] = fileparts(which(mfilename));
+            pth = [];
+            
+            if ispc
+                userdir = getenv('USERPROFILE'); 
+            else
+                userdir= getenv('HOME'); 
+            end
+            
+            pths = {mfilepth, fullfile(userdir,'Downloads'), fullfile(userdir,'Desktop'), userdir};
+            
+            for j = 1:numel(pths)
+                if exist(fullfile(pths{j},[fname,'.mat']), 'file')
+                    pth = pths{j}; break;
+                end
+            end            
+            
+            
+            if isempty(pth)
+                imageDataFileContent.imageDataMenu.description = 'Couldn''t find kspace_explorer.mat';
+                imageDataFileContent.imageDataMenu.data = rand(512);
+                app.CouldnotfindTextArea.Visible = 'on';
+                app.CouldnotfindTextArea.Value = sprintf('%s ', string(pths));
+                app.CouldnotfindTextAreaLabel.Visible = 'on';
+                app.CouldnotfindTextAreaLabel.Text = sprintf('Could not find %s', [fname,'.mat']);
+            else
+                imageDataFileContent = load(fullfile(pth,[fname,'.mat']));
+                app.CouldnotfindTextArea.Visible = 'off';
+                app.CouldnotfindTextAreaLabel.Visible = 'off';                
+            end
+            app.imageDataMenu = imageDataFileContent.imageDataMenu;
+            
+            app.ApplyGRAPPAweightsSwitch.Enable = 'Off';
+            app.kycenterstripSlider.Enable = 'Off';
+            
+            % setup image data menu
+            app.ChooseimageDropDown.Items = {};
+            for j = 1:numel(app.imageDataMenu)
+                app.ChooseimageDropDown.Items{j} = app.imageDataMenu(j).description;
+            end
+            app.ChooseimageDropDown.Value = app.ChooseimageDropDown.Items{1};            
+            
+            % read image data menu
+            app.selectData();
+            
+            % update image and k-space views
+            app.displayData();
+            
+            app.lampDone();
+            
+        end
+
+        % Selection changed function: KspacedisplayButtonGroup
+        function KspacedisplayButtonGroupSelectionChanged(app, event)
+            % selectedButton = app.KspacedisplayButtonGroup.SelectedObject;
+            app.displayKspaceData();
+        end
+
+        % Selection changed function: ImagedisplayButtonGroup
+        function ImagedisplayButtonGroupSelectionChanged(app, event)
+            % selectedButton = app.ImagedisplayButtonGroup.SelectedObject;
+            app.displayImageData();
+        end
+
+        % Value changed function: ApplyGRAPPAweightsSwitch
+        function ParallelimagingSwitchValueChanged(app, event)
+           app.lampInProgress('Calculating...');
+           app.dataUpdate();
+           app.displayData();
+           app.lampDone();           
+        end
+
+        % Value changed function: ChooseimageDropDown
+        function DropDownValueChanged(app, event)
+            % value = app.ChooseimageDropDown.Value;
+            % read image data menu
+            app.lampInProgress('Reading data...');
+            app.selectData();
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();            
+        end
+
+        % Value changed function: FOVxSlider, FOVySlider
+        function SliderValueChanged(app, event)
+            % value = app.FOVxSlider.Value;
+            app.lampInProgress('Calculating...');
+            if app.FOVxSlider.Value > 31 && app.FOVxSlider.Value < 35
+                app.FOVxSlider.Value = 33.3333333333;
+            else
+                app.FOVxSlider.Value = 2.5 * round(app.FOVxSlider.Value/2.5);
+            end
+            if app.FOVySlider.Value > 31 && app.FOVySlider.Value < 35
+                app.FOVySlider.Value = 33.3333333333;
+            else
+                app.FOVySlider.Value = 2.5 * round(app.FOVySlider.Value/2.5);
+            end
+            app.grappaWeights = [];
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();            
+        end
+
+        % Selection changed function: PhaseEncodingdirButtonGroup
+        function PhaseEncodingdirButtonGroupSelectionChanged(app, event)
+            % selectedButton = app.PhaseEncodingdirButtonGroup.SelectedObject;
+            app.lampInProgress('Calculating...');
+            app.grappaWeights = [];
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();            
+        end
+
+        % Value changed function: AddnoiseKnob
+        function AddnoiseKnobValueChanged(app, event)
+            % value = app.AddnoiseKnob.Value;
+            app.lampInProgress('Calculating...');
+            app.grappaWeights = [];
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();            
+        end
+
+        % Value changed function: accelerationFactorRKnob
+        function accelerationFactorRKnobValueChanged(app, event)
+            %value = app.accelerationFactorRKnob.Value;
+            app.lampInProgress('Calculating...');
+            app.grappaWeights = [];
+            app.dataUpdate();
+            app.displayData();            
+            app.lampDone();            
+        end
+
+        % Value changed function: kycenterstripSlider
+        function kycenterstripSliderValueChanged(app, event)
+            % value = app.kycenterstripSlider.Value;
+            app.lampInProgress('Calculating...');
+            app.kycenterstripSlider.Value = round(app.kycenterstripSlider.Value);
+            app.grappaWeights = [];
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();
+        end
+
+        % Value changed function: FOVkxSlider, FOVkySlider
+        function kSliderValueChanged(app, event)
+            % value = app.FOVkySlider.Value;
+            app.lampInProgress('Calculating...');
+            if app.FOVkxSlider.Value > 31 && app.FOVkxSlider.Value < 35
+                app.FOVkxSlider.Value = 33.3333333333;
+            elseif app.FOVkxSlider.Value < ceil(app.fullDataSize(2)/200)
+                app.FOVkxSlider.Value = ceil(200/app.fullDataSize(2));
+            else
+                app.FOVkxSlider.Value = 2.5 * round(app.FOVkxSlider.Value/2.5);
+            end
+            if app.FOVkySlider.Value > 31 && app.FOVkySlider.Value < 35
+                app.FOVkySlider.Value = 33.3333333333;
+            elseif app.FOVkySlider.Value < ceil(app.fullDataSize(1)/200)
+                app.FOVkySlider.Value = ceil(200/app.fullDataSize(1));
+            else
+                app.FOVkySlider.Value = 2.5 * round(app.FOVkySlider.Value/2.5);
+            end            
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();
+        end
+
+        % Value changed function: imageLevel, imageWindow, 
+        % showOriginalCheckBox
+        function refreshImage(app, event)
+            % value = app.showOriginalCheckBox.Value;
+            app.displayImageData();
+        end
+
+        % Value changed function: kspaceLevel, kspaceWindow
+        function refreshKspace(app, event)
+            % value = app.kspaceWindow.Value;
+            app.displayKspaceData();
+        end
+
+        % Value changed function: UsezerofillCheckBox
+        function UsezerofillCheckBoxValueChanged(app, event)
+            % value = app.UsezerofillCheckBox.Value;
+            app.lampInProgress('Calculating...');
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();
+        end
+
+        % Value changed function: kycropModeSwitch
+        function kycropModeSwitchValueChanged(app, event)
+            % value = app.kycropModeSwitch.Value;
+            app.lampInProgress('Calculating...');
+            if strcmp(app.kycropModeSwitch.Value,'Bottom')
+                app.kxcropModeSwitch.Value = 'Symmetric';
+                app.kxcropModeSwitch.Enable = 'Off';
+            else
+                app.kxcropModeSwitch.Enable = 'On';
+            end
+                app.dataUpdate();
+            app.displayData();
+            app.lampDone();            
+        end
+
+        % Value changed function: kxcropModeSwitch
+        function kxcropModeSwitchValueChanged(app, event)
+            % value = app.kxcropModeSwitch.Value;
+            app.lampInProgress('Calculating...');
+            if strcmp(app.kxcropModeSwitch.Value,'Left')
+                app.kycropModeSwitch.Value = 'Symmetric';
+                app.kycropModeSwitch.Enable = 'Off';
+            else
+                app.kycropModeSwitch.Enable = 'On';
+            end       
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();                
+        end
+
+        % Value changed function: UseFermiCheckBox
+        function UseFermiCheckBoxValueChanged(app, event)
+            % value = app.UseFermiCheckBox.Value;            
+            app.lampInProgress('Calculating...');
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();
+        end
+
+        % Selection changed function: ReconMethodButtonGroup
+        function ReconMethodButtonGroupSelectionChanged(app, event)
+            %selectedButton = app.ReconMethodButtonGroup.SelectedObject;
+            app.lampInProgress('Calculating...');
+            app.dataUpdate();
+            app.displayData();
+            app.lampDone();
+        end
+
+        % Value changed function: QuitButton
+        function QuitButtonPushed(app, event)
+            delete(app)
+        end
+    end
+
+    % App initialization and construction
+    methods (Access = private)
+
+        % Create UIFigure and components
+        function createComponents(app)
+
+            % Create kspaceExplorer
+            app.kspaceExplorer = uifigure;
+            app.kspaceExplorer.AutoResizeChildren = 'off';
+            app.kspaceExplorer.Position = [100 100 1360 863];
+            app.kspaceExplorer.Name = 'k-space Explorer';
+            app.kspaceExplorer.Resize = 'off';
+
+            % Create UI_kspace
+            app.UI_kspace = uiaxes(app.kspaceExplorer);
+            app.UI_kspace.DataAspectRatio = [1 1 1];
+            app.UI_kspace.PlotBoxAspectRatio = [511 511 1];
+            app.UI_kspace.XLim = [1 512];
+            app.UI_kspace.YLim = [1 512];
+            app.UI_kspace.YDir = 'reverse';
+            app.UI_kspace.TickDir = 'out';
+            app.UI_kspace.XTick = [];
+            app.UI_kspace.YTick = [];
+            app.UI_kspace.Color = [0.902 0.902 0.902];
+            app.UI_kspace.Position = [106 218 521 521];
+
+            % Create FOVxSliderLabel
+            app.FOVxSliderLabel = uilabel(app.kspaceExplorer);
+            app.FOVxSliderLabel.HorizontalAlignment = 'right';
+            app.FOVxSliderLabel.Position = [856 198 60 22];
+            app.FOVxSliderLabel.Text = 'FOV x [%]';
+
+            % Create FOVxSlider
+            app.FOVxSlider = uislider(app.kspaceExplorer);
+            app.FOVxSlider.MajorTicks = [0 10 20 30 40 50 60 70 80 90 100];
+            app.FOVxSlider.ValueChangedFcn = createCallbackFcn(app, @SliderValueChanged, true);
+            app.FOVxSlider.Position = [925 212 371 3];
+            app.FOVxSlider.Value = 100;
+
+            % Create KspaceExplorerLabel
+            app.KspaceExplorerLabel = uilabel(app.kspaceExplorer);
+            app.KspaceExplorerLabel.BackgroundColor = [0.6 0.702 0.8];
+            app.KspaceExplorerLabel.HorizontalAlignment = 'center';
+            app.KspaceExplorerLabel.FontSize = 28;
+            app.KspaceExplorerLabel.Position = [1 817 1361 47];
+            app.KspaceExplorerLabel.Text = 'K-space Explorer';
+
+            % Create FOVkySliderLabel
+            app.FOVkySliderLabel = uilabel(app.kspaceExplorer);
+            app.FOVkySliderLabel.HorizontalAlignment = 'right';
+            app.FOVkySliderLabel.Position = [34 272 66 22];
+            app.FOVkySliderLabel.Text = 'FOV ky [%]';
+
+            % Create FOVkySlider
+            app.FOVkySlider = uislider(app.kspaceExplorer);
+            app.FOVkySlider.MajorTicks = [0 10 20 30 40 50 60 70 80 90 100];
+            app.FOVkySlider.Orientation = 'vertical';
+            app.FOVkySlider.ValueChangedFcn = createCallbackFcn(app, @kSliderValueChanged, true);
+            app.FOVkySlider.Position = [65 307 3 371];
+            app.FOVkySlider.Value = 100;
+
+            % Create FOVySliderLabel
+            app.FOVySliderLabel = uilabel(app.kspaceExplorer);
+            app.FOVySliderLabel.HorizontalAlignment = 'right';
+            app.FOVySliderLabel.Position = [778 272 60 22];
+            app.FOVySliderLabel.Text = 'FOV y [%]';
+
+            % Create FOVySlider
+            app.FOVySlider = uislider(app.kspaceExplorer);
+            app.FOVySlider.MajorTicks = [0 10 20 30 40 50 60 70 80 90 100];
+            app.FOVySlider.Orientation = 'vertical';
+            app.FOVySlider.ValueChangedFcn = createCallbackFcn(app, @SliderValueChanged, true);
+            app.FOVySlider.Position = [791 307 3 371];
+            app.FOVySlider.Value = 100;
+
+            % Create UI_kspace_zoom
+            app.UI_kspace_zoom = uiaxes(app.kspaceExplorer);
+            title(app.UI_kspace_zoom, 'k-space center')
+            app.UI_kspace_zoom.PlotBoxAspectRatio = [1 0.925742574257426 0.925742574257426];
+            app.UI_kspace_zoom.FontSize = 10;
+            app.UI_kspace_zoom.ClippingStyle = 'rectangle';
+            app.UI_kspace_zoom.TickLabelInterpreter = 'none';
+            app.UI_kspace_zoom.XTick = [241 256 272];
+            app.UI_kspace_zoom.YTick = [241 256 272];
+            app.UI_kspace_zoom.LineWidth = 1;
+            app.UI_kspace_zoom.Color = [0.9412 0.9412 0.9412];
+            app.UI_kspace_zoom.Clipping = 'off';
+            app.UI_kspace_zoom.Position = [519 697 111 115];
+
+            % Create FOVkxSliderLabel
+            app.FOVkxSliderLabel = uilabel(app.kspaceExplorer);
+            app.FOVkxSliderLabel.HorizontalAlignment = 'right';
+            app.FOVkxSliderLabel.Position = [129 198 66 22];
+            app.FOVkxSliderLabel.Text = 'FOV kx [%]';
+
+            % Create FOVkxSlider
+            app.FOVkxSlider = uislider(app.kspaceExplorer);
+            app.FOVkxSlider.MajorTicks = [0 10 20 30 40 50 60 70 80 90 100];
+            app.FOVkxSlider.ValueChangedFcn = createCallbackFcn(app, @kSliderValueChanged, true);
+            app.FOVkxSlider.Position = [204 212 371 3];
+            app.FOVkxSlider.Value = 100;
+
+            % Create UI_ispace
+            app.UI_ispace = uiaxes(app.kspaceExplorer);
+            app.UI_ispace.PlotBoxAspectRatio = [1 0.98488120950324 0.98488120950324];
+            app.UI_ispace.XLim = [1 512];
+            app.UI_ispace.YLim = [1 512];
+            app.UI_ispace.YDir = 'reverse';
+            app.UI_ispace.Box = 'on';
+            app.UI_ispace.XTick = [];
+            app.UI_ispace.XTickLabel = '';
+            app.UI_ispace.YTick = [];
+            app.UI_ispace.YTickLabel = '';
+            app.UI_ispace.Color = [0.902 0.902 0.902];
+            app.UI_ispace.Position = [837 218 521 521];
+
+            % Create UI_ispace_zoom
+            app.UI_ispace_zoom = uiaxes(app.kspaceExplorer);
+            title(app.UI_ispace_zoom, 'image center')
+            app.UI_ispace_zoom.AmbientLightColor = 'none';
+            app.UI_ispace_zoom.PlotBoxAspectRatio = [1 0.944444444444444 0.944444444444444];
+            app.UI_ispace_zoom.FontSize = 10;
+            app.UI_ispace_zoom.ClippingStyle = 'rectangle';
+            app.UI_ispace_zoom.TickLabelInterpreter = 'none';
+            app.UI_ispace_zoom.XTick = [241 256 272];
+            app.UI_ispace_zoom.YTick = [241 256 272];
+            app.UI_ispace_zoom.LineWidth = 1;
+            app.UI_ispace_zoom.Color = [0.9412 0.9412 0.9412];
+            app.UI_ispace_zoom.Clipping = 'off';
+            app.UI_ispace_zoom.Position = [1247 697 111 115];
+
+            % Create KspacedisplayButtonGroup
+            app.KspacedisplayButtonGroup = uibuttongroup(app.kspaceExplorer);
+            app.KspacedisplayButtonGroup.AutoResizeChildren = 'off';
+            app.KspacedisplayButtonGroup.SelectionChangedFcn = createCallbackFcn(app, @KspacedisplayButtonGroupSelectionChanged, true);
+            app.KspacedisplayButtonGroup.Title = 'K-space display';
+            app.KspacedisplayButtonGroup.Position = [181 764 322 47];
+
+            % Create kMagnitudeButton
+            app.kMagnitudeButton = uiradiobutton(app.KspacedisplayButtonGroup);
+            app.kMagnitudeButton.Text = 'Magnitude';
+            app.kMagnitudeButton.FontSize = 10;
+            app.kMagnitudeButton.Position = [11 1 70 22];
+            app.kMagnitudeButton.Value = true;
+
+            % Create kPhaseButton
+            app.kPhaseButton = uiradiobutton(app.KspacedisplayButtonGroup);
+            app.kPhaseButton.Text = 'Phase';
+            app.kPhaseButton.FontSize = 10;
+            app.kPhaseButton.Position = [85 1 50 22];
+
+            % Create kMagPhaseButton
+            app.kMagPhaseButton = uiradiobutton(app.KspacedisplayButtonGroup);
+            app.kMagPhaseButton.Text = 'Mag. + Phase';
+            app.kMagPhaseButton.FontSize = 10;
+            app.kMagPhaseButton.Position = [138 1 84 22];
+
+            % Create kRealButton
+            app.kRealButton = uiradiobutton(app.KspacedisplayButtonGroup);
+            app.kRealButton.Text = 'Real';
+            app.kRealButton.FontSize = 10;
+            app.kRealButton.Position = [225 1 42 22];
+
+            % Create kImagButton
+            app.kImagButton = uiradiobutton(app.KspacedisplayButtonGroup);
+            app.kImagButton.Text = 'Imag';
+            app.kImagButton.FontSize = 10;
+            app.kImagButton.Position = [270 1 44 22];
+
+            % Create ImagedisplayButtonGroup
+            app.ImagedisplayButtonGroup = uibuttongroup(app.kspaceExplorer);
+            app.ImagedisplayButtonGroup.AutoResizeChildren = 'off';
+            app.ImagedisplayButtonGroup.SelectionChangedFcn = createCallbackFcn(app, @ImagedisplayButtonGroupSelectionChanged, true);
+            app.ImagedisplayButtonGroup.Title = 'Image display';
+            app.ImagedisplayButtonGroup.Position = [906 764 322 47];
+
+            % Create MagnitudeButton
+            app.MagnitudeButton = uiradiobutton(app.ImagedisplayButtonGroup);
+            app.MagnitudeButton.Text = 'Magnitude';
+            app.MagnitudeButton.FontSize = 10;
+            app.MagnitudeButton.Position = [11 1 70 22];
+            app.MagnitudeButton.Value = true;
+
+            % Create PhaseButton
+            app.PhaseButton = uiradiobutton(app.ImagedisplayButtonGroup);
+            app.PhaseButton.Text = 'Phase';
+            app.PhaseButton.FontSize = 10;
+            app.PhaseButton.Position = [85 1 50 22];
+
+            % Create MagPhaseButton
+            app.MagPhaseButton = uiradiobutton(app.ImagedisplayButtonGroup);
+            app.MagPhaseButton.Text = 'Mag. + Phase';
+            app.MagPhaseButton.FontSize = 10;
+            app.MagPhaseButton.Position = [138 1 84 22];
+
+            % Create RealButton
+            app.RealButton = uiradiobutton(app.ImagedisplayButtonGroup);
+            app.RealButton.Text = 'Real';
+            app.RealButton.FontSize = 10;
+            app.RealButton.Position = [225 1 42 22];
+
+            % Create ImagButton
+            app.ImagButton = uiradiobutton(app.ImagedisplayButtonGroup);
+            app.ImagButton.Text = 'Imag';
+            app.ImagButton.FontSize = 10;
+            app.ImagButton.Position = [270 1 44 22];
+
+            % Create TabGroup
+            app.TabGroup = uitabgroup(app.kspaceExplorer);
+            app.TabGroup.AutoResizeChildren = 'off';
+            app.TabGroup.Position = [376 8 609 163];
+
+            % Create DataselectionTab
+            app.DataselectionTab = uitab(app.TabGroup);
+            app.DataselectionTab.AutoResizeChildren = 'off';
+            app.DataselectionTab.Title = 'Data selection';
+
+            % Create ChooseimageLabel
+            app.ChooseimageLabel = uilabel(app.DataselectionTab);
+            app.ChooseimageLabel.HorizontalAlignment = 'right';
+            app.ChooseimageLabel.Position = [23 62 83 22];
+            app.ChooseimageLabel.Text = 'Choose image';
+
+            % Create ChooseimageDropDown
+            app.ChooseimageDropDown = uidropdown(app.DataselectionTab);
+            app.ChooseimageDropDown.Items = {'<custom image>'};
+            app.ChooseimageDropDown.ValueChangedFcn = createCallbackFcn(app, @DropDownValueChanged, true);
+            app.ChooseimageDropDown.Position = [115 62 293 22];
+            app.ChooseimageDropDown.Value = '<custom image>';
+
+            % Create PhaseEncodingdirButtonGroup
+            app.PhaseEncodingdirButtonGroup = uibuttongroup(app.DataselectionTab);
+            app.PhaseEncodingdirButtonGroup.AutoResizeChildren = 'off';
+            app.PhaseEncodingdirButtonGroup.SelectionChangedFcn = createCallbackFcn(app, @PhaseEncodingdirButtonGroupSelectionChanged, true);
+            app.PhaseEncodingdirButtonGroup.Title = 'Phase encoding dir.';
+            app.PhaseEncodingdirButtonGroup.Position = [468 28 123 84];
+
+            % Create PhaseEncodingVerticalButton
+            app.PhaseEncodingVerticalButton = uitogglebutton(app.PhaseEncodingdirButtonGroup);
+            app.PhaseEncodingVerticalButton.Text = 'Vertical (Y)';
+            app.PhaseEncodingVerticalButton.Position = [11 31 100 22];
+            app.PhaseEncodingVerticalButton.Value = true;
+
+            % Create PhaseEncodingHorizontalButton
+            app.PhaseEncodingHorizontalButton = uitogglebutton(app.PhaseEncodingdirButtonGroup);
+            app.PhaseEncodingHorizontalButton.Text = 'Horizontal (X)';
+            app.PhaseEncodingHorizontalButton.Position = [11 10 100 22];
+
+            % Create ReconstructionoptionsTab
+            app.ReconstructionoptionsTab = uitab(app.TabGroup);
+            app.ReconstructionoptionsTab.AutoResizeChildren = 'off';
+            app.ReconstructionoptionsTab.Title = 'Reconstruction options';
+
+            % Create AddnoiseLabel
+            app.AddnoiseLabel = uilabel(app.ReconstructionoptionsTab);
+            app.AddnoiseLabel.HorizontalAlignment = 'center';
+            app.AddnoiseLabel.Position = [61 1 60 22];
+            app.AddnoiseLabel.Text = 'Add noise';
+
+            % Create AddnoiseKnob
+            app.AddnoiseKnob = uiknob(app.ReconstructionoptionsTab, 'continuous');
+            app.AddnoiseKnob.ValueChangedFcn = createCallbackFcn(app, @AddnoiseKnobValueChanged, true);
+            app.AddnoiseKnob.Position = [61 43 60 60];
+
+            % Create UsezerofillCheckBox
+            app.UsezerofillCheckBox = uicheckbox(app.ReconstructionoptionsTab);
+            app.UsezerofillCheckBox.ValueChangedFcn = createCallbackFcn(app, @UsezerofillCheckBoxValueChanged, true);
+            app.UsezerofillCheckBox.Text = 'Use zerofilling (fill up k-space with zeros up to 512x512)';
+            app.UsezerofillCheckBox.Position = [234 97 324 22];
+
+            % Create UseFermiCheckBox
+            app.UseFermiCheckBox = uicheckbox(app.ReconstructionoptionsTab);
+            app.UseFermiCheckBox.ValueChangedFcn = createCallbackFcn(app, @UseFermiCheckBoxValueChanged, true);
+            app.UseFermiCheckBox.Text = 'Use Fermi filtering (make smooth at k-space edge)';
+            app.UseFermiCheckBox.Position = [234 70 297 22];
+
+            % Create ParallelimagingTab
+            app.ParallelimagingTab = uitab(app.TabGroup);
+            app.ParallelimagingTab.AutoResizeChildren = 'off';
+            app.ParallelimagingTab.Title = 'Parallel imaging';
+
+            % Create AccelerationfactorRKnobLabel
+            app.AccelerationfactorRKnobLabel = uilabel(app.ParallelimagingTab);
+            app.AccelerationfactorRKnobLabel.HorizontalAlignment = 'center';
+            app.AccelerationfactorRKnobLabel.Position = [18 16 118 16];
+            app.AccelerationfactorRKnobLabel.Text = 'Acceleration factor R';
+
+            % Create accelerationFactorRKnob
+            app.accelerationFactorRKnob = uiknob(app.ParallelimagingTab, 'discrete');
+            app.accelerationFactorRKnob.Items = {'1', '2', '3', '4', '5', '6'};
+            app.accelerationFactorRKnob.ValueChangedFcn = createCallbackFcn(app, @accelerationFactorRKnobValueChanged, true);
+            app.accelerationFactorRKnob.Position = [51 54 52 52];
+            app.accelerationFactorRKnob.Value = '1';
+
+            % Create kycenterstripSliderLabel
+            app.kycenterstripSliderLabel = uilabel(app.ParallelimagingTab);
+            app.kycenterstripSliderLabel.HorizontalAlignment = 'right';
+            app.kycenterstripSliderLabel.Position = [253 16 103 22];
+            app.kycenterstripSliderLabel.Text = 'ky center strip [%]';
+
+            % Create kycenterstripSlider
+            app.kycenterstripSlider = uislider(app.ParallelimagingTab);
+            app.kycenterstripSlider.Limits = [0 30];
+            app.kycenterstripSlider.MajorTicks = [0 5 10 15 20 25 30];
+            app.kycenterstripSlider.ValueChangedFcn = createCallbackFcn(app, @kycenterstripSliderValueChanged, true);
+            app.kycenterstripSlider.Position = [181 75 248 3];
+
+            % Create ApplyGRAPPAweightsLabel
+            app.ApplyGRAPPAweightsLabel = uilabel(app.ParallelimagingTab);
+            app.ApplyGRAPPAweightsLabel.HorizontalAlignment = 'center';
+            app.ApplyGRAPPAweightsLabel.Position = [463 4 132 22];
+            app.ApplyGRAPPAweightsLabel.Text = 'Apply GRAPPA weights';
+
+            % Create ApplyGRAPPAweightsSwitch
+            app.ApplyGRAPPAweightsSwitch = uiswitch(app.ParallelimagingTab, 'toggle');
+            app.ApplyGRAPPAweightsSwitch.ValueChangedFcn = createCallbackFcn(app, @ParallelimagingSwitchValueChanged, true);
+            app.ApplyGRAPPAweightsSwitch.Position = [519 62 20 45];
+
+            % Create InformationPanel
+            app.InformationPanel = uipanel(app.kspaceExplorer);
+            app.InformationPanel.AutoResizeChildren = 'off';
+            app.InformationPanel.TitlePosition = 'centertop';
+            app.InformationPanel.Title = 'Information';
+            app.InformationPanel.Position = [632 487 147 162];
+
+            % Create ScanTimeLabel
+            app.ScanTimeLabel = uilabel(app.InformationPanel);
+            app.ScanTimeLabel.Position = [7 108 117 22];
+            app.ScanTimeLabel.Text = 'Scan Time [%]:  100';
+
+            % Create RelativeSNRLabel
+            app.RelativeSNRLabel = uilabel(app.InformationPanel);
+            app.RelativeSNRLabel.Position = [7 86 124 22];
+            app.RelativeSNRLabel.Text = 'Relative SNR [%]: 100';
+
+            % Create acqMatrixSizeLabel
+            app.acqMatrixSizeLabel = uilabel(app.InformationPanel);
+            app.acqMatrixSizeLabel.Position = [7 29 120 22];
+            app.acqMatrixSizeLabel.Text = 'Acq. matrix: 512x512';
+
+            % Create recMatrixSizeLabel
+            app.recMatrixSizeLabel = uilabel(app.InformationPanel);
+            app.recMatrixSizeLabel.Position = [7 6 120 22];
+            app.recMatrixSizeLabel.Text = 'Rec. matrix: 512x512';
+
+            % Create SNRefficiencyLabel
+            app.SNRefficiencyLabel = uilabel(app.InformationPanel);
+            app.SNRefficiencyLabel.Position = [7 64 140 22];
+            app.SNRefficiencyLabel.Text = 'SNR efficiency [%]: 100';
+
+            % Create AuthorTextArea
+            app.AuthorTextArea = uitextarea(app.kspaceExplorer);
+            app.AuthorTextArea.Editable = 'off';
+            app.AuthorTextArea.HorizontalAlignment = 'right';
+            app.AuthorTextArea.FontColor = [0.502 0.502 0.502];
+            app.AuthorTextArea.BackgroundColor = [0.6 0.702 0.8];
+            app.AuthorTextArea.Position = [1044 817 319 49];
+            app.AuthorTextArea.Value = {'29 April, 2018 '; 'Neuro MR Physics Group, Karolinska University Hospital '; 'mrphysics@neuroradkarolinska.se '};
+
+            % Create WindowLevelPanel
+            app.WindowLevelPanel = uipanel(app.kspaceExplorer);
+            app.WindowLevelPanel.AutoResizeChildren = 'off';
+            app.WindowLevelPanel.Title = 'Window/Level';
+            app.WindowLevelPanel.Position = [771 751 124 60];
+
+            % Create WSliderLabel
+            app.WSliderLabel = uilabel(app.WindowLevelPanel);
+            app.WSliderLabel.HorizontalAlignment = 'right';
+            app.WSliderLabel.FontSize = 9;
+            app.WSliderLabel.Position = [-3 20 25 22];
+            app.WSliderLabel.Text = 'W';
+
+            % Create imageWindow
+            app.imageWindow = uislider(app.WindowLevelPanel);
+            app.imageWindow.Limits = [0 1.7];
+            app.imageWindow.MajorTicks = [];
+            app.imageWindow.MajorTickLabels = {};
+            app.imageWindow.ValueChangedFcn = createCallbackFcn(app, @refreshImage, true);
+            app.imageWindow.MinorTicks = [];
+            app.imageWindow.FontSize = 9;
+            app.imageWindow.Position = [43 29 65 3];
+            app.imageWindow.Value = 1;
+
+            % Create LSliderLabel
+            app.LSliderLabel = uilabel(app.WindowLevelPanel);
+            app.LSliderLabel.HorizontalAlignment = 'right';
+            app.LSliderLabel.FontSize = 9;
+            app.LSliderLabel.Position = [-3 1 25 22];
+            app.LSliderLabel.Text = 'L';
+
+            % Create imageLevel
+            app.imageLevel = uislider(app.WindowLevelPanel);
+            app.imageLevel.Limits = [-0.4 0.4];
+            app.imageLevel.MajorTicks = [];
+            app.imageLevel.MajorTickLabels = {};
+            app.imageLevel.ValueChangedFcn = createCallbackFcn(app, @refreshImage, true);
+            app.imageLevel.MinorTicks = [];
+            app.imageLevel.Position = [43 10 65 3];
+
+            % Create kWindowLevelPanel
+            app.kWindowLevelPanel = uipanel(app.kspaceExplorer);
+            app.kWindowLevelPanel.AutoResizeChildren = 'off';
+            app.kWindowLevelPanel.Title = 'Window/Level';
+            app.kWindowLevelPanel.Position = [45 751 124 60];
+
+            % Create WSlider_2Label
+            app.WSlider_2Label = uilabel(app.kWindowLevelPanel);
+            app.WSlider_2Label.HorizontalAlignment = 'right';
+            app.WSlider_2Label.FontSize = 9;
+            app.WSlider_2Label.Position = [-6 20 25 22];
+            app.WSlider_2Label.Text = 'W';
+
+            % Create kspaceWindow
+            app.kspaceWindow = uislider(app.kWindowLevelPanel);
+            app.kspaceWindow.Limits = [0 1.7];
+            app.kspaceWindow.MajorTicks = [];
+            app.kspaceWindow.MajorTickLabels = {};
+            app.kspaceWindow.ValueChangedFcn = createCallbackFcn(app, @refreshKspace, true);
+            app.kspaceWindow.MinorTicks = [];
+            app.kspaceWindow.Position = [40 29 65 3];
+            app.kspaceWindow.Value = 1;
+
+            % Create LSlider_2Label
+            app.LSlider_2Label = uilabel(app.kWindowLevelPanel);
+            app.LSlider_2Label.HorizontalAlignment = 'right';
+            app.LSlider_2Label.FontSize = 9;
+            app.LSlider_2Label.Position = [-6 1 25 22];
+            app.LSlider_2Label.Text = 'L';
+
+            % Create kspaceLevel
+            app.kspaceLevel = uislider(app.kWindowLevelPanel);
+            app.kspaceLevel.Limits = [-0.4 0.4];
+            app.kspaceLevel.MajorTicks = [];
+            app.kspaceLevel.MajorTickLabels = {};
+            app.kspaceLevel.ValueChangedFcn = createCallbackFcn(app, @refreshKspace, true);
+            app.kspaceLevel.MinorTicks = [];
+            app.kspaceLevel.Position = [40 10 65 3];
+
+            % Create showOriginalCheckBox
+            app.showOriginalCheckBox = uicheckbox(app.kspaceExplorer);
+            app.showOriginalCheckBox.ValueChangedFcn = createCallbackFcn(app, @refreshImage, true);
+            app.showOriginalCheckBox.Text = 'Show original image';
+            app.showOriginalCheckBox.FontColor = [0.902 0.902 0.902];
+            app.showOriginalCheckBox.Position = [1219 230 131 22];
+
+            % Create kycropModeSwitch
+            app.kycropModeSwitch = uiswitch(app.kspaceExplorer, 'slider');
+            app.kycropModeSwitch.Items = {'Bottom', 'Symmetric'};
+            app.kycropModeSwitch.Orientation = 'vertical';
+            app.kycropModeSwitch.ValueChangedFcn = createCallbackFcn(app, @kycropModeSwitchValueChanged, true);
+            app.kycropModeSwitch.Position = [23 456 20 45];
+            app.kycropModeSwitch.Value = 'Symmetric';
+
+            % Create CalculationstatusLampLabel
+            app.CalculationstatusLampLabel = uilabel(app.kspaceExplorer);
+            app.CalculationstatusLampLabel.Position = [70 22 203 22];
+            app.CalculationstatusLampLabel.Text = 'Calculation status';
+
+            % Create CalculationstatusLamp
+            app.CalculationstatusLamp = uilamp(app.kspaceExplorer);
+            app.CalculationstatusLamp.Position = [32 21 26 26];
+
+            % Create kspace1mLabel
+            app.kspace1mLabel = uilabel(app.kspaceExplorer);
+            app.kspace1mLabel.FontSize = 22;
+            app.kspace1mLabel.FontWeight = 'bold';
+            app.kspace1mLabel.Position = [291 735 151 29];
+            app.kspace1mLabel.Text = 'k-space [1/m]';
+
+            % Create imagemLabel
+            app.imagemLabel = uilabel(app.kspaceExplorer);
+            app.imagemLabel.FontSize = 22;
+            app.imagemLabel.FontWeight = 'bold';
+            app.imagemLabel.Position = [1055 735 111 29];
+            app.imagemLabel.Text = 'image [m]';
+
+            % Create kxcropModeSwitch
+            app.kxcropModeSwitch = uiswitch(app.kspaceExplorer, 'slider');
+            app.kxcropModeSwitch.Items = {'Left', 'Symmetric'};
+            app.kxcropModeSwitch.ValueChangedFcn = createCallbackFcn(app, @kxcropModeSwitchValueChanged, true);
+            app.kxcropModeSwitch.Position = [155 134 45 20];
+            app.kxcropModeSwitch.Value = 'Symmetric';
+
+            % Create ReconMethodButtonGroup
+            app.ReconMethodButtonGroup = uibuttongroup(app.kspaceExplorer);
+            app.ReconMethodButtonGroup.AutoResizeChildren = 'off';
+            app.ReconMethodButtonGroup.SelectionChangedFcn = createCallbackFcn(app, @ReconMethodButtonGroupSelectionChanged, true);
+            app.ReconMethodButtonGroup.TitlePosition = 'centertop';
+            app.ReconMethodButtonGroup.Title = 'Recon Method';
+            app.ReconMethodButtonGroup.Position = [639 381 133 84];
+
+            % Create iFFTButton
+            app.iFFTButton = uitogglebutton(app.ReconMethodButtonGroup);
+            app.iFFTButton.Text = 'iFFT';
+            app.iFFTButton.Position = [11 31 100 22];
+            app.iFFTButton.Value = true;
+
+            % Create HomodyneButton
+            app.HomodyneButton = uitogglebutton(app.ReconMethodButtonGroup);
+            app.HomodyneButton.Enable = 'off';
+            app.HomodyneButton.Text = 'Homodyne';
+            app.HomodyneButton.Position = [11 10 100 22];
+
+            % Create CouldnotfindTextAreaLabel
+            app.CouldnotfindTextAreaLabel = uilabel(app.kspaceExplorer);
+            app.CouldnotfindTextAreaLabel.Enable = 'off';
+            app.CouldnotfindTextAreaLabel.Position = [991 67 288 22];
+            app.CouldnotfindTextAreaLabel.Text = 'Could not find';
+
+            % Create CouldnotfindTextArea
+            app.CouldnotfindTextArea = uitextarea(app.kspaceExplorer);
+            app.CouldnotfindTextArea.Editable = 'off';
+            app.CouldnotfindTextArea.Enable = 'off';
+            app.CouldnotfindTextArea.Position = [991 88 360 85];
+
+            % Create QuitButton
+            app.QuitButton = uibutton(app.kspaceExplorer, 'state');
+            app.QuitButton.ValueChangedFcn = createCallbackFcn(app, @QuitButtonPushed, true);
+            app.QuitButton.Text = 'Quit';
+            app.QuitButton.BackgroundColor = [0.6 0.702 0.8];
+            app.QuitButton.Position = [1226 24 100 43];
+        end
+    end
+
+    methods (Access = public)
+
+        % Construct app
+        function app = kspace_explorer
+
+            % Create and configure components
+            createComponents(app)
+
+            % Register the app with App Designer
+            registerApp(app, app.kspaceExplorer)
+
+            % Execute the startup function
+            runStartupFcn(app, @startupFcn)
+
+            if nargout == 0
+                clear app
+            end
+        end
+
+        % Code that executes before app deletion
+        function delete(app)
+
+            % Delete UIFigure when app is deleted
+            delete(app.kspaceExplorer)
+        end
+    end
+end

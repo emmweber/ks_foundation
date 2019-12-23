@@ -1,0 +1,27 @@
+2019/04/22 17:01:27.672875|ksgre_tutorial|32029|psd_syserr|ERROR|../epic_get.cpp|846|  Name: ksgre_tutorial, Release: DV26.0_R02, Compiler v3.4, ERROR: 2217472, Msg: opbw: CV not found
+2019/04/22 17:01:31.144095|ksgre_tutorial|32029|psd_syserr|ERROR|../epic_get.cpp|846|  Name: ksgre_tutorial, Release: DV26.0_R02, Compiler v3.4, ERROR: 2217472, Msg: bw: CV not found
+2019/04/22 18:24:24.020162|ksgre_tutorial|6936|psd_syserr|ERROR|../KSFoundation_common.c|89|  Name: ksgre_tutorial, Release: DV26.0_R02, Compiler v3.4, ERROR: 0, Msg: ks_pg_trap(phaseenc): Invalid position -356468, it must be between 4us and 4s
+2019/04/22 18:24:24.020343|ksgre_tutorial|6936|psd_syserr|ERROR|../KSFoundation_common.c|89|  Name: ksgre_tutorial, Release: DV26.0_R02, Compiler v3.4, ERROR: 0, Msg: ks_pg_trap(phaseenc): Invalid position -356468, it must be between 4us and 4s
+2019/06/27 15:03:58.041042|ksgre_tutorial|12787|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/27 15:03:58.124439|ksgre_tutorial|12787|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/27 15:19:42.259305|ksgre_tutorial|12787|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: : CV not found
+2019/06/27 15:20:27.392038|ksgre_tutorial|12787|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: : CV not found
+2019/06/27 16:42:52.650126|ksgre_tutorial|20178|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/27 16:42:52.651509|ksgre_tutorial|20178|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 10:31:52.069478|ksgre_tutorial|32533|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 10:31:52.153005|ksgre_tutorial|32533|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 10:47:39.595782|ksgre_tutorial|20178|epic_processcmds|ERROR|epic_processcmds.cpp|515| fatal error, PSD 20178 terminating
+2019/06/28 11:00:56.065430|ksgre_tutorial|11066|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R02, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:00:56.076886|ksgre_tutorial|11066|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R02, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:11:31.566535|ksgre_tutorial|13418|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:11:31.568099|ksgre_tutorial|13418|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:13:15.813295|ksgre_tutorial|13545|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:13:15.814845|ksgre_tutorial|13545|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:25:37.632446|ksgre_tutorial|15875|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:25:37.633850|ksgre_tutorial|15875|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:26:11.203067|ksgre_tutorial|15953|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 11:26:11.204366|ksgre_tutorial|15953|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 13:27:29.717423|ksgre_tutorial|21974|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 13:27:29.718798|ksgre_tutorial|21974|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 13:32:21.983078|ksgre_tutorial|24110|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found
+2019/06/28 13:32:21.984807|ksgre_tutorial|24110|psd_syserr|ERROR|epic_get.cpp|846|  Name: ksgre_tutorial, Release: RX27.0_R03, Compiler v3.4, ERROR: 2217472, Msg: cfmaxb1rmshead: CV not found

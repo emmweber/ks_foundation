@@ -1,0 +1,524 @@
+
+  a_rf1mps1  = _a_rf1mps1.fixedflag ?  ((void)(a_rf1mps1), a_rf1mps1) : a_rf1mps1;
+  res_rf1mps1  = _res_rf1mps1.fixedflag ?  ((void)(0), res_rf1mps1) : 0;
+  cyc_rf1mps1  = _cyc_rf1mps1.fixedflag ?  ((void)(1.0), cyc_rf1mps1) : 1.0;
+  off_rf1mps1  = _off_rf1mps1.fixedflag ?  ((void)(0), off_rf1mps1) : 0;
+  alpha_rf1mps1  = _alpha_rf1mps1.fixedflag ?  ((void)(0.46), alpha_rf1mps1) : 0.46;
+  pw_rf1mps1  = _pw_rf1mps1.fixedflag ?  ((void)(pw_rf1mps1), pw_rf1mps1) : pw_rf1mps1;
+  wg_rf1mps1  = _wg_rf1mps1.fixedflag ?  ((void)(RHO), wg_rf1mps1) : RHO;
+
+    wg_gyrf1mps1  = _wg_gyrf1mps1.fixedflag ?  ((void)(tg_killer_axis), wg_gyrf1mps1) : tg_killer_axis;
+
+    wg_gy1mps1  = _wg_gy1mps1.fixedflag ?  ((void)(tg_killer_axis), wg_gy1mps1) : tg_killer_axis;
+
+    wg_gzrf1mps1  = _wg_gzrf1mps1.fixedflag ?  ((void)(ZGRAD), wg_gzrf1mps1) : ZGRAD;
+
+    wg_gz1mps1  = _wg_gz1mps1.fixedflag ?  ((void)(ZGRAD), wg_gz1mps1) : ZGRAD;
+
+    wg_gx1mps1  = _wg_gx1mps1.fixedflag ?  ((void)(tg_read_axis), wg_gx1mps1) : tg_read_axis;
+
+  flip_rf2mps1  = _flip_rf2mps1.fixedflag ?  ((void)(flip_rf2mps1), flip_rf2mps1) : flip_rf2mps1;
+  a_rf2mps1  = _a_rf2mps1.fixedflag ?  ((void)(flip_rf2mps1/180), a_rf2mps1) : flip_rf2mps1/180;
+  pw_gzrf2mps1  = _pw_gzrf2mps1.fixedflag ?  ((void)(pw_rf2mps1), pw_gzrf2mps1) : pw_rf2mps1;
+  pw_rf2mps1  = _pw_rf2mps1.fixedflag ?  ((void)(pw_rf2mps1), pw_rf2mps1) : pw_rf2mps1;
+  cyc_rf2mps1  = _cyc_rf2mps1.fixedflag ?  ((void)(cyc_rf2mps1), cyc_rf2mps1) : cyc_rf2mps1;
+  thk_rf2mps1  = _thk_rf2mps1.fixedflag ?  ((void)(thk_rf2mps1), thk_rf2mps1) : thk_rf2mps1;
+  wg_rf2mps1  = _wg_rf2mps1.fixedflag ?  ((void)(TYPRHO1), wg_rf2mps1) : TYPRHO1;
+
+    wg_gzrf2lmps1  = _wg_gzrf2lmps1.fixedflag ?  ((void)(ZGRADB), wg_gzrf2lmps1) : ZGRADB;
+
+    wg_gzrf2rmps1  = _wg_gzrf2rmps1.fixedflag ?  ((void)(ZGRADB), wg_gzrf2rmps1) : ZGRADB;
+
+    wg_gxwmps1  = _wg_gxwmps1.fixedflag ?  ((void)(tg_read_axis), wg_gxwmps1) : tg_read_axis;
+
+
+
+  flip_rf1cfl  = _flip_rf1cfl.fixedflag ?  ((void)(flip_rf1cfl), flip_rf1cfl) : flip_rf1cfl;
+  a_rf1cfl  = _a_rf1cfl.fixedflag ?  ((void)(flip_rf1cfl/180), a_rf1cfl) : flip_rf1cfl/180;
+  pw_gzrf1cfl  = _pw_gzrf1cfl.fixedflag ?  ((void)(pw_rf1cfl), pw_gzrf1cfl) : pw_rf1cfl;
+  pw_rf1cfl  = _pw_rf1cfl.fixedflag ?  ((void)(pw_rf1cfl), pw_rf1cfl) : pw_rf1cfl;
+  cyc_rf1cfl  = _cyc_rf1cfl.fixedflag ?  ((void)(cyc_rf1cfl), cyc_rf1cfl) : cyc_rf1cfl;
+  thk_rf1cfl  = _thk_rf1cfl.fixedflag ?  ((void)(thk_rf1cfl), thk_rf1cfl) : thk_rf1cfl;
+  wg_rf1cfl  = _wg_rf1cfl.fixedflag ?  ((void)(TYPRHO1), wg_rf1cfl) : TYPRHO1;
+
+    wg_gz1cfl  = _wg_gz1cfl.fixedflag ?  ((void)(ZGRAD), wg_gz1cfl) : ZGRAD;
+
+
+    wg_gykcfl  = _wg_gykcfl.fixedflag ?  ((void)(YGRAD), wg_gykcfl) : YGRAD;
+
+
+    wg_gxkrcvn  = _wg_gxkrcvn.fixedflag ?  ((void)(XGRAD), wg_gxkrcvn) : XGRAD;
+
+    wg_gykrcvn  = _wg_gykrcvn.fixedflag ?  ((void)(YGRAD), wg_gykrcvn) : YGRAD;
+
+    wg_gzkrcvn  = _wg_gzkrcvn.fixedflag ?  ((void)(ZGRAD), wg_gzkrcvn) : ZGRAD;
+
+  pw_grd_trig  = _pw_grd_trig.fixedflag ?  ((void)(pw_grdtrig), pw_grd_trig) : pw_grdtrig;
+  wg_grd_trig  = _wg_grd_trig.fixedflag ?  ((void)(SSP), wg_grd_trig) : SSP;
+
+    wg_gxk2rcvn  = _wg_gxk2rcvn.fixedflag ?  ((void)(XGRAD), wg_gxk2rcvn) : XGRAD;
+
+    wg_gyk2rcvn  = _wg_gyk2rcvn.fixedflag ?  ((void)(YGRAD), wg_gyk2rcvn) : YGRAD;
+
+    wg_gzk2rcvn  = _wg_gzk2rcvn.fixedflag ?  ((void)(ZGRAD), wg_gzk2rcvn) : ZGRAD;
+
+  pw_rcvn_wait  = _pw_rcvn_wait.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_rcvn_wait) : GRAD_UPDATE_TIME;
+  wg_rcvn_wait  = _wg_rcvn_wait.fixedflag ?  ((void)(ZGRAD), wg_rcvn_wait) : ZGRAD;
+
+
+
+
+
+
+  flip_rf0cfh  = _flip_rf0cfh.fixedflag ?  ((void)(flip_rf0cfh), flip_rf0cfh) : flip_rf0cfh;
+  a_rf0cfh  = _a_rf0cfh.fixedflag ?  ((void)(flip_rf0cfh/180), a_rf0cfh) : flip_rf0cfh/180;
+  pw_gzrf0cfh  = _pw_gzrf0cfh.fixedflag ?  ((void)(pw_rf0cfh), pw_gzrf0cfh) : pw_rf0cfh;
+  res_gzrf0cfh  = _res_gzrf0cfh.fixedflag ?  ((void)(1), res_gzrf0cfh) : 1;
+  res_rf0cfh  = _res_rf0cfh.fixedflag ?  ((void)(res_rf0cfh), res_rf0cfh) : res_rf0cfh;
+  pw_rf0cfh  = _pw_rf0cfh.fixedflag ?  ((void)(pw_rf0cfh), pw_rf0cfh) : pw_rf0cfh;
+  cyc_rf0cfh  = _cyc_rf0cfh.fixedflag ?  ((void)(cyc_rf0cfh), cyc_rf0cfh) : cyc_rf0cfh;
+  thk_rf0cfh  = _thk_rf0cfh.fixedflag ?  ((void)(((presscfh_ctrl==PRESSCFH_NONE)?opslthick:presscfh_ir_slthick)), thk_rf0cfh) : ((presscfh_ctrl==PRESSCFH_NONE)?opslthick:presscfh_ir_slthick);
+  wg_rf0cfh  = _wg_rf0cfh.fixedflag ?  ((void)(TYPRHO1), wg_rf0cfh) : TYPRHO1;
+
+  a_omegarf0cfh       = _a_omegarf0cfh.fixedflag ?   ((void)((float)-1), a_omegarf0cfh) : (float)-1;
+  res_omegarf0cfh     = _res_omegarf0cfh.fixedflag ?  ((void)(res_rf0cfh), res_omegarf0cfh) : res_rf0cfh;
+  pw_omegarf0cfh      = _pw_omegarf0cfh.fixedflag ?  ((void)(pw_omegarf0cfh), pw_omegarf0cfh) : pw_omegarf0cfh;
+  rfslot_omegarf0cfh  = _rfslot_omegarf0cfh.fixedflag ?  ((void)(RF0_CFH_SLOT), rfslot_omegarf0cfh) : RF0_CFH_SLOT;
+  off_omegarf0cfh     = _off_omegarf0cfh.fixedflag ?  ((void)(0), off_omegarf0cfh) : 0;
+  n_omegarf0cfh       = _n_omegarf0cfh.fixedflag ?  ((void)(0), n_omegarf0cfh) : 0;  /* Initialize to 0 because the macro will be called
+                              at least once and the n_$[ext2_name] will
+                              be incremented in the pulsegen section */
+  wg_omegarf0cfh  = _wg_omegarf0cfh.fixedflag ?  ((void)(THETA), wg_omegarf0cfh) : THETA;
+
+    wg_gyrf0kcfh  = _wg_gyrf0kcfh.fixedflag ?  ((void)(YGRAD), wg_gyrf0kcfh) : YGRAD;
+
+  pw_zticfh  = _pw_zticfh.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_zticfh) : GRAD_UPDATE_TIME;
+  wg_zticfh  = _wg_zticfh.fixedflag ?  ((void)(ZGRAD), wg_zticfh) : ZGRAD;
+
+  pw_rticfh  = _pw_rticfh.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_rticfh) : GRAD_UPDATE_TIME;
+  wg_rticfh  = _wg_rticfh.fixedflag ?  ((void)(RHO), wg_rticfh) : RHO;
+
+  pw_xticfh  = _pw_xticfh.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_xticfh) : GRAD_UPDATE_TIME;
+  wg_xticfh  = _wg_xticfh.fixedflag ?  ((void)(XGRAD), wg_xticfh) : XGRAD;
+
+  pw_yticfh  = _pw_yticfh.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_yticfh) : GRAD_UPDATE_TIME;
+  wg_yticfh  = _wg_yticfh.fixedflag ?  ((void)(YGRAD), wg_yticfh) : YGRAD;
+
+  pw_sticfh  = _pw_sticfh.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_sticfh) : GRAD_UPDATE_TIME;
+  wg_sticfh  = _wg_sticfh.fixedflag ?  ((void)(SSP), wg_sticfh) : SSP;
+
+  flip_rf1cfh  = _flip_rf1cfh.fixedflag ?  ((void)(flip_rf1cfh), flip_rf1cfh) : flip_rf1cfh;
+  a_rf1cfh  = _a_rf1cfh.fixedflag ?  ((void)(flip_rf1cfh/180), a_rf1cfh) : flip_rf1cfh/180;
+  pw_gzrf1cfh  = _pw_gzrf1cfh.fixedflag ?  ((void)(pw_rf1cfh), pw_gzrf1cfh) : pw_rf1cfh;
+  pw_rf1cfh  = _pw_rf1cfh.fixedflag ?  ((void)(pw_rf1cfh), pw_rf1cfh) : pw_rf1cfh;
+  cyc_rf1cfh  = _cyc_rf1cfh.fixedflag ?  ((void)(cyc_rf1cfh), cyc_rf1cfh) : cyc_rf1cfh;
+  thk_rf1cfh  = _thk_rf1cfh.fixedflag ?  ((void)(((presscfh_ctrl==PRESSCFH_NONE)?thk_rf1cfh:presscfh_slthick)), thk_rf1cfh) : ((presscfh_ctrl==PRESSCFH_NONE)?thk_rf1cfh:presscfh_slthick);
+  wg_rf1cfh  = _wg_rf1cfh.fixedflag ?  ((void)(TYPRHO1), wg_rf1cfh) : TYPRHO1;
+
+  a_rf2cfh  = _a_rf2cfh.fixedflag ?  ((void)(a_rf2cfh), a_rf2cfh) : a_rf2cfh;
+  res_rf2cfh  = _res_rf2cfh.fixedflag ?  ((void)(0), res_rf2cfh) : 0;
+  cyc_rf2cfh  = _cyc_rf2cfh.fixedflag ?  ((void)(1.0), cyc_rf2cfh) : 1.0;
+  off_rf2cfh  = _off_rf2cfh.fixedflag ?  ((void)(0), off_rf2cfh) : 0;
+  alpha_rf2cfh  = _alpha_rf2cfh.fixedflag ?  ((void)(0.46), alpha_rf2cfh) : 0.46;
+  pw_rf2cfh  = _pw_rf2cfh.fixedflag ?  ((void)(pw_rf2cfh), pw_rf2cfh) : pw_rf2cfh;
+  wg_rf2cfh  = _wg_rf2cfh.fixedflag ?  ((void)(RHO), wg_rf2cfh) : RHO;
+
+  a_rf3cfh  = _a_rf3cfh.fixedflag ?  ((void)(a_rf3cfh), a_rf3cfh) : a_rf3cfh;
+  res_rf3cfh  = _res_rf3cfh.fixedflag ?  ((void)(0), res_rf3cfh) : 0;
+  cyc_rf3cfh  = _cyc_rf3cfh.fixedflag ?  ((void)(1.0), cyc_rf3cfh) : 1.0;
+  off_rf3cfh  = _off_rf3cfh.fixedflag ?  ((void)(0), off_rf3cfh) : 0;
+  alpha_rf3cfh  = _alpha_rf3cfh.fixedflag ?  ((void)(0.46), alpha_rf3cfh) : 0.46;
+  pw_rf3cfh  = _pw_rf3cfh.fixedflag ?  ((void)(pw_rf3cfh), pw_rf3cfh) : pw_rf3cfh;
+  wg_rf3cfh  = _wg_rf3cfh.fixedflag ?  ((void)(RHO), wg_rf3cfh) : RHO;
+
+  a_rf4cfh  = _a_rf4cfh.fixedflag ?  ((void)(a_rf4cfh), a_rf4cfh) : a_rf4cfh;
+  res_rf4cfh  = _res_rf4cfh.fixedflag ?  ((void)(0), res_rf4cfh) : 0;
+  cyc_rf4cfh  = _cyc_rf4cfh.fixedflag ?  ((void)(1.0), cyc_rf4cfh) : 1.0;
+  off_rf4cfh  = _off_rf4cfh.fixedflag ?  ((void)(0), off_rf4cfh) : 0;
+  alpha_rf4cfh  = _alpha_rf4cfh.fixedflag ?  ((void)(0.46), alpha_rf4cfh) : 0.46;
+  pw_rf4cfh  = _pw_rf4cfh.fixedflag ?  ((void)(pw_rf4cfh), pw_rf4cfh) : pw_rf4cfh;
+  wg_rf4cfh  = _wg_rf4cfh.fixedflag ?  ((void)(RHO), wg_rf4cfh) : RHO;
+
+    wg_gxrf2cfh  = _wg_gxrf2cfh.fixedflag ?  ((void)(XGRAD), wg_gxrf2cfh) : XGRAD;
+
+    wg_gyrf2cfh  = _wg_gyrf2cfh.fixedflag ?  ((void)(YGRAD), wg_gyrf2cfh) : YGRAD;
+
+    wg_gzrf2lcfh  = _wg_gzrf2lcfh.fixedflag ?  ((void)(ZGRAD), wg_gzrf2lcfh) : ZGRAD;
+
+    wg_gzrf2rcfh  = _wg_gzrf2rcfh.fixedflag ?  ((void)(ZGRAD), wg_gzrf2rcfh) : ZGRAD;
+
+    wg_gyrf3cfh  = _wg_gyrf3cfh.fixedflag ?  ((void)(YGRAD), wg_gyrf3cfh) : YGRAD;
+
+    wg_gzrf3lcfh  = _wg_gzrf3lcfh.fixedflag ?  ((void)(wg_cfh_rf3), wg_gzrf3lcfh) : wg_cfh_rf3;
+
+    wg_gzrf3rcfh  = _wg_gzrf3rcfh.fixedflag ?  ((void)(wg_cfh_rf3), wg_gzrf3rcfh) : wg_cfh_rf3;
+
+    wg_gy1cfh  = _wg_gy1cfh.fixedflag ?  ((void)(YGRAD), wg_gy1cfh) : YGRAD;
+
+    wg_gx1cfh  = _wg_gx1cfh.fixedflag ?  ((void)(XGRAD), wg_gx1cfh) : XGRAD;
+
+    wg_gzrf4cfh  = _wg_gzrf4cfh.fixedflag ?  ((void)(ZGRAD), wg_gzrf4cfh) : ZGRAD;
+
+  pw_isi_slice1  = _pw_isi_slice1.fixedflag ?  ((void)(pw_isislice), pw_isi_slice1) : pw_isislice;
+  wg_isi_slice1  = _wg_isi_slice1.fixedflag ?  ((void)(SSP), wg_isi_slice1) : SSP;
+
+  pw_rot_slice1  = _pw_rot_slice1.fixedflag ?  ((void)(pw_rotslice), pw_rot_slice1) : pw_rotslice;
+  wg_rot_slice1  = _wg_rot_slice1.fixedflag ?  ((void)(SSP), wg_rot_slice1) : SSP;
+
+  pw_isi_slice2  = _pw_isi_slice2.fixedflag ?  ((void)(pw_isislice), pw_isi_slice2) : pw_isislice;
+  wg_isi_slice2  = _wg_isi_slice2.fixedflag ?  ((void)(SSP), wg_isi_slice2) : SSP;
+
+  pw_rot_slice2  = _pw_rot_slice2.fixedflag ?  ((void)(pw_rotslice), pw_rot_slice2) : pw_rotslice;
+  wg_rot_slice2  = _wg_rot_slice2.fixedflag ?  ((void)(SSP), wg_rot_slice2) : SSP;
+
+    wg_gzrf4lcfh  = _wg_gzrf4lcfh.fixedflag ?  ((void)(wg_cfh_rf4), wg_gzrf4lcfh) : wg_cfh_rf4;
+
+    wg_gzrf4rcfh  = _wg_gzrf4rcfh.fixedflag ?  ((void)(wg_cfh_rf4), wg_gzrf4rcfh) : wg_cfh_rf4;
+
+
+    wg_gykcfh  = _wg_gykcfh.fixedflag ?  ((void)(YGRAD), wg_gykcfh) : YGRAD;
+
+
+
+  ia_contrfhubsel  = _ia_contrfhubsel.fixedflag ?  ((void)(0), ia_contrfhubsel) : 0;
+
+  ia_contrfsel  = _ia_contrfsel.fixedflag ?  ((void)(0), ia_contrfsel) : 0;
+
+  pw_csw_wait  = _pw_csw_wait.fixedflag ?  ((void)(SSP_UPDATE_TIME), pw_csw_wait) : SSP_UPDATE_TIME;
+  wg_csw_wait  = _wg_csw_wait.fixedflag ?  ((void)(SSP), wg_csw_wait) : SSP;
+
+
+
+  flip_rf1ftg  = _flip_rf1ftg.fixedflag ?  ((void)(flip_rf1ftg), flip_rf1ftg) : flip_rf1ftg;
+  a_rf1ftg  = _a_rf1ftg.fixedflag ?  ((void)(flip_rf1ftg/180), a_rf1ftg) : flip_rf1ftg/180;
+  pw_gzrf1ftg  = _pw_gzrf1ftg.fixedflag ?  ((void)(pw_rf1ftg), pw_gzrf1ftg) : pw_rf1ftg;
+  pw_rf1ftg  = _pw_rf1ftg.fixedflag ?  ((void)(pw_rf1ftg), pw_rf1ftg) : pw_rf1ftg;
+  cyc_rf1ftg  = _cyc_rf1ftg.fixedflag ?  ((void)(cyc_rf1ftg), cyc_rf1ftg) : cyc_rf1ftg;
+  thk_rf1ftg  = _thk_rf1ftg.fixedflag ?  ((void)(FTGopslthickz1), thk_rf1ftg) : FTGopslthickz1;
+  wg_rf1ftg  = _wg_rf1ftg.fixedflag ?  ((void)(TYPRHO1), wg_rf1ftg) : TYPRHO1;
+
+    wg_gz1ftg  = _wg_gz1ftg.fixedflag ?  ((void)(ZGRAD), wg_gz1ftg) : ZGRAD;
+
+  flip_rf2ftg  = _flip_rf2ftg.fixedflag ?  ((void)(flip_rf2ftg), flip_rf2ftg) : flip_rf2ftg;
+  a_rf2ftg  = _a_rf2ftg.fixedflag ?  ((void)(flip_rf2ftg/180), a_rf2ftg) : flip_rf2ftg/180;
+  pw_gzrf2ftg  = _pw_gzrf2ftg.fixedflag ?  ((void)(pw_rf2ftg), pw_gzrf2ftg) : pw_rf2ftg;
+  pw_rf2ftg  = _pw_rf2ftg.fixedflag ?  ((void)(pw_rf2ftg), pw_rf2ftg) : pw_rf2ftg;
+  cyc_rf2ftg  = _cyc_rf2ftg.fixedflag ?  ((void)(cyc_rf2ftg), cyc_rf2ftg) : cyc_rf2ftg;
+  thk_rf2ftg  = _thk_rf2ftg.fixedflag ?  ((void)(FTGopslthickz2), thk_rf2ftg) : FTGopslthickz2;
+  wg_rf2ftg  = _wg_rf2ftg.fixedflag ?  ((void)(TYPRHO1), wg_rf2ftg) : TYPRHO1;
+
+    wg_gz2ftg  = _wg_gz2ftg.fixedflag ?  ((void)(ZGRAD), wg_gz2ftg) : ZGRAD;
+
+  flip_rf3ftg  = _flip_rf3ftg.fixedflag ?  ((void)(flip_rf3ftg), flip_rf3ftg) : flip_rf3ftg;
+  a_rf3ftg  = _a_rf3ftg.fixedflag ?  ((void)(flip_rf3ftg/180), a_rf3ftg) : flip_rf3ftg/180;
+  pw_gzrf3ftg  = _pw_gzrf3ftg.fixedflag ?  ((void)(pw_rf3ftg), pw_gzrf3ftg) : pw_rf3ftg;
+  pw_rf3ftg  = _pw_rf3ftg.fixedflag ?  ((void)(pw_rf3ftg), pw_rf3ftg) : pw_rf3ftg;
+  cyc_rf3ftg  = _cyc_rf3ftg.fixedflag ?  ((void)(cyc_rf2ftg), cyc_rf3ftg) : cyc_rf2ftg;
+  thk_rf3ftg  = _thk_rf3ftg.fixedflag ?  ((void)(FTGopslthickz3), thk_rf3ftg) : FTGopslthickz3;
+  wg_rf3ftg  = _wg_rf3ftg.fixedflag ?  ((void)(TYPRHO1), wg_rf3ftg) : TYPRHO1;
+
+    wg_gz3ftg  = _wg_gz3ftg.fixedflag ?  ((void)(ZGRAD), wg_gz3ftg) : ZGRAD;
+
+    wg_gx1ftg  = _wg_gx1ftg.fixedflag ?  ((void)(read_axis), wg_gx1ftg) : read_axis;
+
+    wg_gx1bftg  = _wg_gx1bftg.fixedflag ?  ((void)(read_axis), wg_gx1bftg) : read_axis;
+
+    wg_gxw1ftg  = _wg_gxw1ftg.fixedflag ?  ((void)(read_axis), wg_gxw1ftg) : read_axis;
+
+    wg_postgxw1ftg  = _wg_postgxw1ftg.fixedflag ?  ((void)(read_axis), wg_postgxw1ftg) : read_axis;
+
+
+    wg_gz2bftg  = _wg_gz2bftg.fixedflag ?  ((void)(ZGRAD), wg_gz2bftg) : ZGRAD;
+
+    wg_gx2ftg  = _wg_gx2ftg.fixedflag ?  ((void)(read_axis), wg_gx2ftg) : read_axis;
+
+    wg_gxw2ftg  = _wg_gxw2ftg.fixedflag ?  ((void)(read_axis), wg_gxw2ftg) : read_axis;
+
+    wg_gx2test  = _wg_gx2test.fixedflag ?  ((void)(read_axis), wg_gx2test) : read_axis;
+
+
+
+  a_rf1xtg  = _a_rf1xtg.fixedflag ?  ((void)(a_rf1xtg), a_rf1xtg) : a_rf1xtg;
+  res_rf1xtg  = _res_rf1xtg.fixedflag ?  ((void)(0), res_rf1xtg) : 0;
+  cyc_rf1xtg  = _cyc_rf1xtg.fixedflag ?  ((void)(1.0), cyc_rf1xtg) : 1.0;
+  off_rf1xtg  = _off_rf1xtg.fixedflag ?  ((void)(0), off_rf1xtg) : 0;
+  alpha_rf1xtg  = _alpha_rf1xtg.fixedflag ?  ((void)(0.46), alpha_rf1xtg) : 0.46;
+  pw_rf1xtg  = _pw_rf1xtg.fixedflag ?  ((void)(pw_rf1xtg), pw_rf1xtg) : pw_rf1xtg;
+  wg_rf1xtg  = _wg_rf1xtg.fixedflag ?  ((void)(RHO), wg_rf1xtg) : RHO;
+
+    wg_gyrf1xtg  = _wg_gyrf1xtg.fixedflag ?  ((void)(tg_killer_axis), wg_gyrf1xtg) : tg_killer_axis;
+
+    wg_gzrf1xtg  = _wg_gzrf1xtg.fixedflag ?  ((void)(ZGRAD), wg_gzrf1xtg) : ZGRAD;
+
+    wg_gykxtgl  = _wg_gykxtgl.fixedflag ?  ((void)(tg_killer_axis), wg_gykxtgl) : tg_killer_axis;
+
+            flip_rf3xtg  = _flip_rf3xtg.fixedflag ?  ((void)(flip_rf3xtg), flip_rf3xtg) : flip_rf3xtg;
+            a_rf3xtg  = _a_rf3xtg.fixedflag ?  ((void)(flip_rf3xtg/NOM_FA_RFMT), a_rf3xtg) : flip_rf3xtg/NOM_FA_RFMT;
+            pw_rf3xtg  = _pw_rf3xtg.fixedflag ?  ((void)(pw_bsrf), pw_rf3xtg) : pw_bsrf;
+            res_rf3xtg  = _res_rf3xtg.fixedflag ?  ((void)(RES_FERMI_BLS), res_rf3xtg) : RES_FERMI_BLS;
+            wg_rf3xtg  = _wg_rf3xtg.fixedflag ?  ((void)(TYPRHO1), wg_rf3xtg) : TYPRHO1;
+
+    wg_gz1xtg  = _wg_gz1xtg.fixedflag ?  ((void)(ZGRAD), wg_gz1xtg) : ZGRAD;
+
+  flip_rf2xtg  = _flip_rf2xtg.fixedflag ?  ((void)(flip_rf2xtg), flip_rf2xtg) : flip_rf2xtg;
+  a_rf2xtg  = _a_rf2xtg.fixedflag ?  ((void)(flip_rf2xtg/180), a_rf2xtg) : flip_rf2xtg/180;
+  pw_gzrf2xtg  = _pw_gzrf2xtg.fixedflag ?  ((void)(pw_rf2xtg), pw_gzrf2xtg) : pw_rf2xtg;
+  pw_rf2xtg  = _pw_rf2xtg.fixedflag ?  ((void)(pw_rf2xtg), pw_rf2xtg) : pw_rf2xtg;
+  cyc_rf2xtg  = _cyc_rf2xtg.fixedflag ?  ((void)(cyc_rf2xtg), cyc_rf2xtg) : cyc_rf2xtg;
+  thk_rf2xtg  = _thk_rf2xtg.fixedflag ?  ((void)(TGopslthick), thk_rf2xtg) : TGopslthick;
+  wg_rf2xtg  = _wg_rf2xtg.fixedflag ?  ((void)(TYPRHO1), wg_rf2xtg) : TYPRHO1;
+
+    wg_gz2xtg  = _wg_gz2xtg.fixedflag ?  ((void)(ZGRAD), wg_gz2xtg) : ZGRAD;
+
+            flip_rf4xtg  = _flip_rf4xtg.fixedflag ?  ((void)(flip_rf4xtg), flip_rf4xtg) : flip_rf4xtg;
+            a_rf4xtg  = _a_rf4xtg.fixedflag ?  ((void)(flip_rf4xtg/NOM_FA_RFMT), a_rf4xtg) : flip_rf4xtg/NOM_FA_RFMT;
+            pw_rf4xtg  = _pw_rf4xtg.fixedflag ?  ((void)(pw_bsrf), pw_rf4xtg) : pw_bsrf;
+            res_rf4xtg  = _res_rf4xtg.fixedflag ?  ((void)(RES_FERMI_BLS), res_rf4xtg) : RES_FERMI_BLS;
+            wg_rf4xtg  = _wg_rf4xtg.fixedflag ?  ((void)(TYPRHO1), wg_rf4xtg) : TYPRHO1;
+
+    wg_gykxtgr  = _wg_gykxtgr.fixedflag ?  ((void)(tg_killer_axis), wg_gykxtgr) : tg_killer_axis;
+
+    wg_gx1bxtg  = _wg_gx1bxtg.fixedflag ?  ((void)(tg_read_axis), wg_gx1bxtg) : tg_read_axis;
+
+    wg_gxw1xtg  = _wg_gxw1xtg.fixedflag ?  ((void)(tg_read_axis), wg_gxw1xtg) : tg_read_axis;
+
+
+
+  flip_rf1as  = _flip_rf1as.fixedflag ?  ((void)(flip_rf1as), flip_rf1as) : flip_rf1as;
+  a_rf1as  = _a_rf1as.fixedflag ?  ((void)(flip_rf1as/180), a_rf1as) : flip_rf1as/180;
+  pw_gzrf1as  = _pw_gzrf1as.fixedflag ?  ((void)(pw_rf1as), pw_gzrf1as) : pw_rf1as;
+  pw_rf1as  = _pw_rf1as.fixedflag ?  ((void)(pw_rf1as), pw_rf1as) : pw_rf1as;
+  cyc_rf1as  = _cyc_rf1as.fixedflag ?  ((void)(cyc_rf1as), cyc_rf1as) : cyc_rf1as;
+  thk_rf1as  = _thk_rf1as.fixedflag ?  ((void)(asslthick), thk_rf1as) : asslthick;
+  wg_rf1as  = _wg_rf1as.fixedflag ?  ((void)(TYPRHO1), wg_rf1as) : TYPRHO1;
+
+    wg_gz1as  = _wg_gz1as.fixedflag ?  ((void)(ZGRAD), wg_gz1as) : ZGRAD;
+
+    wg_gxwas  = _wg_gxwas.fixedflag ?  ((void)(XGRAD), wg_gxwas) : XGRAD;
+
+
+    wg_gx1as  = _wg_gx1as.fixedflag ?  ((void)(XGRAD), wg_gx1as) : XGRAD;
+
+   wg_gy1as  = _wg_gy1as.fixedflag ?  ((void)(YGRAD), wg_gy1as) : YGRAD;
+
+   wg_gy1ras  = _wg_gy1ras.fixedflag ?  ((void)(YGRAD), wg_gy1ras) : YGRAD;
+
+    wg_gxkas  = _wg_gxkas.fixedflag ?  ((void)(XGRAD), wg_gxkas) : XGRAD;
+
+    wg_gzkas  = _wg_gzkas.fixedflag ?  ((void)(ZGRAD), wg_gzkas) : ZGRAD;
+
+  a_xdixon  = _a_xdixon.fixedflag ?  ((void)(0.0), a_xdixon) : 0.0;
+  pw_xdixon  = _pw_xdixon.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_xdixon) : GRAD_UPDATE_TIME;
+  wg_xdixon  = _wg_xdixon.fixedflag ?  ((void)(XGRAD), wg_xdixon) : XGRAD;
+
+  a_ydixon  = _a_ydixon.fixedflag ?  ((void)(0.0), a_ydixon) : 0.0;
+  pw_ydixon  = _pw_ydixon.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_ydixon) : GRAD_UPDATE_TIME;
+  wg_ydixon  = _wg_ydixon.fixedflag ?  ((void)(YGRAD), wg_ydixon) : YGRAD;
+
+  a_zdixon  = _a_zdixon.fixedflag ?  ((void)(0.0), a_zdixon) : 0.0;
+  pw_zdixon  = _pw_zdixon.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_zdixon) : GRAD_UPDATE_TIME;
+  wg_zdixon  = _wg_zdixon.fixedflag ?  ((void)(ZGRAD), wg_zdixon) : ZGRAD;
+
+  a_sdixon  = _a_sdixon.fixedflag ?  ((void)(0.0), a_sdixon) : 0.0;
+  pw_sdixon  = _pw_sdixon.fixedflag ?  ((void)(GRAD_UPDATE_TIME), pw_sdixon) : GRAD_UPDATE_TIME;
+  wg_sdixon  = _wg_sdixon.fixedflag ?  ((void)(SSP), wg_sdixon) : SSP;
+
+  a_sdixon2  = _a_sdixon2.fixedflag ?  ((void)(0.0), a_sdixon2) : 0.0;
+  pw_sdixon2  = _pw_sdixon2.fixedflag ?  ((void)(GRAD_UPDATE_TIME+dix_timeas), pw_sdixon2) : GRAD_UPDATE_TIME+dix_timeas;
+  wg_sdixon2  = _wg_sdixon2.fixedflag ?  ((void)(SSP), wg_sdixon2) : SSP;
+
+
+
+
+  ia_dDDIQ  = _ia_dDDIQ.fixedflag ?  ((void)(0), ia_dDDIQ) : 0;
+
+
+  res_rf1rs  = _res_rf1rs.fixedflag ?  ((void)(res_rf1rs), res_rf1rs) : res_rf1rs;
+  wg_rf1rs  = _wg_rf1rs.fixedflag ?  ((void)(RHO), wg_rf1rs) : RHO;
+
+    wg_gzrf1rs  = _wg_gzrf1rs.fixedflag ?  ((void)(ZGRAD), wg_gzrf1rs) : ZGRAD;
+
+    wg_gxkbsrs  = _wg_gxkbsrs.fixedflag ?  ((void)(XGRAD), wg_gxkbsrs) : XGRAD;
+
+    wg_gz1rs  = _wg_gz1rs.fixedflag ?  ((void)(ZGRAD), wg_gz1rs) : ZGRAD;
+
+  a_rfbrs       = _a_rfbrs.fixedflag ?   ((void)((float)1.0), a_rfbrs) : (float)1.0;
+  res_rfbrs     = _res_rfbrs.fixedflag ?  ((void)(res_rfbrs), res_rfbrs) : res_rfbrs;
+  pw_rfbrs      = _pw_rfbrs.fixedflag ?  ((void)(pw_rfbrs), pw_rfbrs) : pw_rfbrs;
+  rfslot_rfbrs  = _rfslot_rfbrs.fixedflag ?  ((void)(RFB_RFSHIM_SLOT), rfslot_rfbrs) : RFB_RFSHIM_SLOT;
+  off_rfbrs     = _off_rfbrs.fixedflag ?  ((void)(0), off_rfbrs) : 0;
+  n_rfbrs       = _n_rfbrs.fixedflag ?  ((void)(0), n_rfbrs) : 0;  /* Initialize to 0 because the macro will be called
+                              at least once and the n_$[ext2_name] will
+                              be incremented in the pulsegen section */
+  wg_rfbrs  = _wg_rfbrs.fixedflag ?  ((void)(RHO), wg_rfbrs) : RHO;
+
+  a_thetarfbrs       = _a_thetarfbrs.fixedflag ?   ((void)((float)1.0), a_thetarfbrs) : (float)1.0;
+  res_thetarfbrs     = _res_thetarfbrs.fixedflag ?  ((void)(res_thetarfbrs), res_thetarfbrs) : res_thetarfbrs;
+  pw_thetarfbrs      = _pw_thetarfbrs.fixedflag ?  ((void)(pw_rfbrs), pw_thetarfbrs) : pw_rfbrs;
+  rfslot_thetarfbrs  = _rfslot_thetarfbrs.fixedflag ?  ((void)(RFB_RFSHIM_SLOT), rfslot_thetarfbrs) : RFB_RFSHIM_SLOT;
+  off_thetarfbrs     = _off_thetarfbrs.fixedflag ?  ((void)(0), off_thetarfbrs) : 0;
+  n_thetarfbrs       = _n_thetarfbrs.fixedflag ?  ((void)(0), n_thetarfbrs) : 0;  /* Initialize to 0 because the macro will be called
+                              at least once and the n_$[ext2_name] will
+                              be incremented in the pulsegen section */
+  wg_thetarfbrs  = _wg_thetarfbrs.fixedflag ?  ((void)(THETA), wg_thetarfbrs) : THETA;
+
+    wg_gzkbsrs  = _wg_gzkbsrs.fixedflag ?  ((void)(ZGRAD), wg_gzkbsrs) : ZGRAD;
+
+    wg_gxwrs  = _wg_gxwrs.fixedflag ?  ((void)(XGRAD), wg_gxwrs) : XGRAD;
+
+
+    wg_gx2rs  = _wg_gx2rs.fixedflag ?  ((void)(XGRAD), wg_gx2rs) : XGRAD;
+
+   wg_gy2rs  = _wg_gy2rs.fixedflag ?  ((void)(YGRAD), wg_gy2rs) : YGRAD;
+
+    wg_gxw2rs  = _wg_gxw2rs.fixedflag ?  ((void)(XGRAD), wg_gxw2rs) : XGRAD;
+
+    wg_gx1rs  = _wg_gx1rs.fixedflag ?  ((void)(XGRAD), wg_gx1rs) : XGRAD;
+
+   wg_gy1rrs  = _wg_gy1rrs.fixedflag ?  ((void)(YGRAD), wg_gy1rrs) : YGRAD;
+
+   wg_gy1rs  = _wg_gy1rs.fixedflag ?  ((void)(YGRAD), wg_gy1rs) : YGRAD;
+
+    wg_gzkrs  = _wg_gzkrs.fixedflag ?  ((void)(ZGRAD), wg_gzkrs) : ZGRAD;
+
+    wg_gxkrs  = _wg_gxkrs.fixedflag ?  ((void)(XGRAD), wg_gxkrs) : XGRAD;
+
+
+
+
+  res_rf1dtg  = _res_rf1dtg.fixedflag ?  ((void)(res_rf1dtg), res_rf1dtg) : res_rf1dtg;
+  wg_rf1dtg  = _wg_rf1dtg.fixedflag ?  ((void)(RHO), wg_rf1dtg) : RHO;
+
+    wg_gzrf1dtg  = _wg_gzrf1dtg.fixedflag ?  ((void)(ZGRAD), wg_gzrf1dtg) : ZGRAD;
+
+    wg_gxkbsdtg  = _wg_gxkbsdtg.fixedflag ?  ((void)(XGRAD), wg_gxkbsdtg) : XGRAD;
+
+    wg_gz1dtg  = _wg_gz1dtg.fixedflag ?  ((void)(ZGRAD), wg_gz1dtg) : ZGRAD;
+
+  a_rfbdtg       = _a_rfbdtg.fixedflag ?   ((void)((float)1.0), a_rfbdtg) : (float)1.0;
+  res_rfbdtg     = _res_rfbdtg.fixedflag ?  ((void)(res_rfbdtg), res_rfbdtg) : res_rfbdtg;
+  pw_rfbdtg      = _pw_rfbdtg.fixedflag ?  ((void)(pw_rfbdtg), pw_rfbdtg) : pw_rfbdtg;
+  rfslot_rfbdtg  = _rfslot_rfbdtg.fixedflag ?  ((void)(RFB_DYNTG_SLOT), rfslot_rfbdtg) : RFB_DYNTG_SLOT;
+  off_rfbdtg     = _off_rfbdtg.fixedflag ?  ((void)(0), off_rfbdtg) : 0;
+  n_rfbdtg       = _n_rfbdtg.fixedflag ?  ((void)(0), n_rfbdtg) : 0;  /* Initialize to 0 because the macro will be called
+                              at least once and the n_$[ext2_name] will
+                              be incremented in the pulsegen section */
+  wg_rfbdtg  = _wg_rfbdtg.fixedflag ?  ((void)(RHO), wg_rfbdtg) : RHO;
+
+  a_thetarfbdtg       = _a_thetarfbdtg.fixedflag ?   ((void)((float)1.0), a_thetarfbdtg) : (float)1.0;
+  res_thetarfbdtg     = _res_thetarfbdtg.fixedflag ?  ((void)(res_thetarfbdtg), res_thetarfbdtg) : res_thetarfbdtg;
+  pw_thetarfbdtg      = _pw_thetarfbdtg.fixedflag ?  ((void)(pw_rfbdtg), pw_thetarfbdtg) : pw_rfbdtg;
+  rfslot_thetarfbdtg  = _rfslot_thetarfbdtg.fixedflag ?  ((void)(RFB_DYNTG_SLOT), rfslot_thetarfbdtg) : RFB_DYNTG_SLOT;
+  off_thetarfbdtg     = _off_thetarfbdtg.fixedflag ?  ((void)(0), off_thetarfbdtg) : 0;
+  n_thetarfbdtg       = _n_thetarfbdtg.fixedflag ?  ((void)(0), n_thetarfbdtg) : 0;  /* Initialize to 0 because the macro will be called
+                              at least once and the n_$[ext2_name] will
+                              be incremented in the pulsegen section */
+  wg_thetarfbdtg  = _wg_thetarfbdtg.fixedflag ?  ((void)(THETA), wg_thetarfbdtg) : THETA;
+
+    wg_gzkbsdtg  = _wg_gzkbsdtg.fixedflag ?  ((void)(ZGRAD), wg_gzkbsdtg) : ZGRAD;
+
+    wg_gxwdtg  = _wg_gxwdtg.fixedflag ?  ((void)(XGRAD), wg_gxwdtg) : XGRAD;
+
+
+    wg_gx2dtg  = _wg_gx2dtg.fixedflag ?  ((void)(XGRAD), wg_gx2dtg) : XGRAD;
+
+   wg_gy2dtg  = _wg_gy2dtg.fixedflag ?  ((void)(YGRAD), wg_gy2dtg) : YGRAD;
+
+    wg_gxw2dtg  = _wg_gxw2dtg.fixedflag ?  ((void)(XGRAD), wg_gxw2dtg) : XGRAD;
+
+    wg_gx1dtg  = _wg_gx1dtg.fixedflag ?  ((void)(XGRAD), wg_gx1dtg) : XGRAD;
+
+   wg_gy1rdtg  = _wg_gy1rdtg.fixedflag ?  ((void)(YGRAD), wg_gy1rdtg) : YGRAD;
+
+   wg_gy1dtg  = _wg_gy1dtg.fixedflag ?  ((void)(YGRAD), wg_gy1dtg) : YGRAD;
+
+    wg_gzkdtg  = _wg_gzkdtg.fixedflag ?  ((void)(ZGRAD), wg_gzkdtg) : ZGRAD;
+
+    wg_gxkdtg  = _wg_gxkdtg.fixedflag ?  ((void)(XGRAD), wg_gxkdtg) : XGRAD;
+
+
+
+
+  a_rf1cal       = _a_rf1cal.fixedflag ?   ((void)((float)a_rf1cal), a_rf1cal) : (float)a_rf1cal;
+  res_rf1cal     = _res_rf1cal.fixedflag ?  ((void)(res_rf1cal), res_rf1cal) : res_rf1cal;
+  pw_rf1cal      = _pw_rf1cal.fixedflag ?  ((void)(pw_rf1cal), pw_rf1cal) : pw_rf1cal;
+  rfslot_rf1cal  = _rfslot_rf1cal.fixedflag ?  ((void)(RF1_EXTCAL_SLOT), rfslot_rf1cal) : RF1_EXTCAL_SLOT;
+  off_rf1cal     = _off_rf1cal.fixedflag ?  ((void)(0), off_rf1cal) : 0;
+  n_rf1cal       = _n_rf1cal.fixedflag ?  ((void)(0), n_rf1cal) : 0;  /* Initialize to 0 because the macro will be called
+                              at least once and the n_$[ext2_name] will
+                              be incremented in the pulsegen section */
+  wg_rf1cal  = _wg_rf1cal.fixedflag ?  ((void)(RHO), wg_rf1cal) : RHO;
+
+    wg_gzrf1cal  = _wg_gzrf1cal.fixedflag ?  ((void)(ZGRAD), wg_gzrf1cal) : ZGRAD;
+
+   wg_gzcombcal  = _wg_gzcombcal.fixedflag ?  ((void)(ZGRAD), wg_gzcombcal) : ZGRAD;
+
+   wg_gzprcal  = _wg_gzprcal.fixedflag ?  ((void)(ZGRAD), wg_gzprcal) : ZGRAD;
+
+    wg_gxwcal  = _wg_gxwcal.fixedflag ?  ((void)(XGRAD), wg_gxwcal) : XGRAD;
+
+
+   wg_gx1cal  = _wg_gx1cal.fixedflag ?  ((void)(XGRAD), wg_gx1cal) : XGRAD;
+
+   wg_gy1cal  = _wg_gy1cal.fixedflag ?  ((void)(YGRAD), wg_gy1cal) : YGRAD;
+
+   wg_gy1rcal  = _wg_gy1rcal.fixedflag ?  ((void)(YGRAD), wg_gy1rcal) : YGRAD;
+
+
+
+
+  a_rf1coil       = _a_rf1coil.fixedflag ?   ((void)((float)a_rf1coil), a_rf1coil) : (float)a_rf1coil;
+  res_rf1coil     = _res_rf1coil.fixedflag ?  ((void)(res_rf1coil), res_rf1coil) : res_rf1coil;
+  pw_rf1coil      = _pw_rf1coil.fixedflag ?  ((void)(pw_rf1coil), pw_rf1coil) : pw_rf1coil;
+  rfslot_rf1coil  = _rfslot_rf1coil.fixedflag ?  ((void)(RF1_AUTOCOIL_SLOT), rfslot_rf1coil) : RF1_AUTOCOIL_SLOT;
+  off_rf1coil     = _off_rf1coil.fixedflag ?  ((void)(0), off_rf1coil) : 0;
+  n_rf1coil       = _n_rf1coil.fixedflag ?  ((void)(0), n_rf1coil) : 0;  /* Initialize to 0 because the macro will be called
+                              at least once and the n_$[ext2_name] will
+                              be incremented in the pulsegen section */
+  wg_rf1coil  = _wg_rf1coil.fixedflag ?  ((void)(RHO), wg_rf1coil) : RHO;
+
+    wg_gzrf1coil  = _wg_gzrf1coil.fixedflag ?  ((void)(ZGRAD), wg_gzrf1coil) : ZGRAD;
+
+   wg_gzcombcoil  = _wg_gzcombcoil.fixedflag ?  ((void)(ZGRAD), wg_gzcombcoil) : ZGRAD;
+
+   wg_gzprcoil  = _wg_gzprcoil.fixedflag ?  ((void)(ZGRAD), wg_gzprcoil) : ZGRAD;
+
+    wg_gxwcoil  = _wg_gxwcoil.fixedflag ?  ((void)(XGRAD), wg_gxwcoil) : XGRAD;
+
+
+   wg_gx1coil  = _wg_gx1coil.fixedflag ?  ((void)(XGRAD), wg_gx1coil) : XGRAD;
+
+   wg_gy1coil  = _wg_gy1coil.fixedflag ?  ((void)(YGRAD), wg_gy1coil) : YGRAD;
+
+   wg_gy1rcoil  = _wg_gy1rcoil.fixedflag ?  ((void)(YGRAD), wg_gy1rcoil) : YGRAD;
+
+
+
+
+
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+  /* dont indent the closing bracket */
+
+
