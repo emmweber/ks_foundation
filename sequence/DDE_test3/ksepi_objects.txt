@@ -1,0 +1,175 @@
+
+KS_SELRF(rfexc):
+slthick: 4.44444
+     gradwave: Waveform assigned
+rfexc.reph.amp: -2.05738
+rfexc.reph.ramptime: 276
+rfexc.reph.plateautime: 8
+rfexc.reph.duration: 560
+rfexc.reph.area: -584.296
+
+KS_RF (rfexc):
+GE RF pulse: ss1528822.rho
+role: KS_RF_ROLE_EXC
+rfwave.res: 3600
+rfwave.duration: 14400
+amp: 0.215085
+flip: 90
+bw: 2571
+cf_offset: 0
+start2iso: 7200
+iso2end: 7200
+     rfpulse.pw: 14400
+     rfpulse.amp: 0.215085
+     rfpulse.abswidth: 0.128
+     rfpulse.effwidth: 0.0636
+     rfpulse.area: 0.1071
+     rfpulse.dtycyc: 0.1828
+     rfpulse.maxpw: 0.0757
+     rfpulse.num: 1
+     rfpulse.max_b1: 0.03807
+     rfpulse.max_int_b1_sq: 0.00133
+     rfpulse.max_rms_b1: 0.0096
+     rfpulse.nom_fa: 90
+     rfpulse.act_fa: 90
+     rfpulse.nom_pw: 14400
+     rfpulse.nom_bw: 2571
+     rfpulse.activity: 104
+     rfpulse.isodelay: 7200
+     rfpulse.scale: 1
+     rfpulse.res: 3600
+     rfpulse.extgradfile: 1
+     rfwave: Waveform assigned
+     thetawave: OFF
+
+KS_SELRF(rfref):
+slthick: 4.44444
+crusherscale: 1
+rfref.LC.amp: 3.84615
+rfref.LC.ramptime: 512
+rfref.LC.plateautime: 8
+rfref.LC.duration: 1032
+rfref.LC.area: 2000
+rfref.trap.amp: 0.478263
+rfref.trap.ramptime: 64
+rfref.trap.plateautime: 3200
+rfref.trap.duration: 3328
+rfref.trap.area: 1561.05
+rfref.RC.amp: 3.84615
+rfref.RC.ramptime: 512
+rfref.RC.plateautime: 8
+rfref.RC.duration: 1032
+rfref.RC.area: 2000
+
+KS_RF (rfref):
+GE RF pulse: rfse1b4.rho
+role: KS_RF_ROLE_REF
+rfwave.res: 400
+rfwave.duration: 3200
+amp: 1
+flip: 180
+bw: 905
+cf_offset: 0
+start2iso: 1600
+iso2end: 1600
+     rfpulse.pw: 3200
+     rfpulse.amp: 1
+     rfpulse.abswidth: 0.2874
+     rfpulse.effwidth: 0.1799
+     rfpulse.area: 0.1867
+     rfpulse.dtycyc: 0.4486
+     rfpulse.maxpw: 0.4486
+     rfpulse.num: 1
+     rfpulse.max_b1: 0.177
+     rfpulse.max_int_b1_sq: 0.01803
+     rfpulse.max_rms_b1: 0.0751
+     rfpulse.nom_fa: 180
+     rfpulse.act_fa: 180
+     rfpulse.nom_pw: 3200
+     rfpulse.nom_bw: 905
+     rfpulse.activity: 104
+     rfpulse.isodelay: 1600
+     rfpulse.scale: 1
+     rfpulse.res: 400
+     rfpulse.extgradfile: 0
+     rfwave: Waveform assigned
+     thetawave: OFF
+
+KS_EPI (epi.read):
+etl: 22
+read_spacing: 0.00 [ms]
+duration: 9.33 [ms]
+time2center: 4.66 [ms]
+
+KS_READTRAP (epi.read):
+fov: 240
+res: 64
+rampsampling: 1
+nover: 0
+acqdelay: 68
+area2center: 364.136
+time2center: 200
+epi.read.echo.duration: 264
+epi.read.echo.rbw: 250
+epi.read.echo.filt.decimation: 1
+epi.read.echo.filt.tdaq: 264
+epi.read.echo.filt.bw: 250
+epi.read.echo.filt.tsp: 2
+epi.read.echo.filt.outputs: 132
+epi.read.echo.filt.prefills: 0
+epi.read.echo.filt.taps: -1
+epi.read.amp: 2.60097
+epi.read.ramptime: 120
+epi.read.plateautime: 160
+epi.read.duration: 400
+epi.read.area: 728.272
+epi.read.omega.amp: 1
+epi.read.omega.ramptime: 120
+epi.read.omega.plateautime: 160
+epi.read.omega.duration: 400
+epi.read.omega.area: 0
+epi.readphaser.amp: -2.52872
+epi.readphaser.ramptime: 120
+epi.readphaser.plateautime: 24
+epi.readphaser.duration: 264
+epi.readphaser.area: -364.136
+epi.blip.amp: 1.38889
+epi.blip.ramptime: 64
+epi.blip.plateautime: 8
+epi.blip.duration: 136
+epi.blip.area: 100
+
+KS_PHASER (epi.blipphaser):
+fov: 240
+res: 66
+nover: 0
+R: 3
+nacslines: 0
+areaoffset: 0
+numlinestoacq: 22
+epi.blipphaser.amp: 2.48484
+epi.blipphaser.ramptime: 120
+epi.blipphaser.plateautime: 8
+epi.blipphaser.duration: 248
+epi.blipphaser.area: 318.059
+DDE_1.amp: 4.25
+DDE_1.ramptime: 1500
+DDE_1.plateautime: 2276
+DDE_1.duration: 5276
+DDE_1.area: 16048
+DDE_2.amp: 4.25
+DDE_2.ramptime: 1500
+DDE_2.plateautime: 2276
+DDE_2.duration: 5276
+DDE_2.area: 16048
+
+KS_EPI ():
+etl: 0
+read_spacing: 0.00 [ms]
+duration: 0.00 [ms]
+time2center: 0.00 [ms]
+spoiler.amp: 4.71698
+spoiler.ramptime: 628
+spoiler.plateautime: 8
+spoiler.duration: 1264
+spoiler.area: 3000

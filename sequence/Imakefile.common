@@ -1,0 +1,206 @@
+/*
+ * Imakefile
+ *
+ * Imakefile template for an EPIC PSD.
+ *
+ * This file creates the Makefile for this PSD on an imboot
+ * and provides the necessary support to generate the (host and tgt)
+ * hardware and simulation executables for an EPIC PSD.
+ *
+ * Support for building the PSD Eval executable and building two PSDs from
+ * the same source file are discontinued.
+ *
+ * Author:  Roshy J. Francis, Daniel L. Premetz
+ * Date  : 20/May/2002
+ *
+ */
+
+/*
+ * Defines RELEASE_NUM, TGT_DIR, PARENT_DIR and possibly GITREV
+ */
+#include "../KSFoundation/common.mk"
+
+/*
+ * The toolset to be used in the make. For a PSD, this is always specified as
+ * EPIC, regardless of whether this is built with EPIC or EPIC+.
+ */
+TOOLSET = EPIC
+
+/*
+ * The make phase where this directory is getting built in product builds;
+ * one of includes, libraries or programs.  Since the PSDs are built in the
+ * final build phase(programs), this parameters must be set to programs for
+ * a PSD directory.
+ */
+MAKE_TARGET = programs
+
+
+/*
+ *
+ * The root name of the PSD to be built; eg: 2dfast, fsemaster
+ */
+PSD = ksepi
+
+
+/*
+ * Local inline files used in this PSD are to be specified here.
+ * These .e files are not compiled separately, but will trigger a recompilation
+ * of the PSD when changed if specified here.
+ */
+ADD_INLINE_FILES =
+
+/*
+ * Additional (local) .e modules to be compiled using the EPIC+ compiler;
+ * only applicable to EPIC+ PSDs.
+ */
+ADD_EFILES =
+
+/*
+ * Local C files to be compiled with the standard and additional host flags
+ * and linked to generate the host hardware (<psdname>) and simulation
+ * (<psdname>.host) executables.
+ */
+ADD_CFILES_HOST =
+
+/*
+ * Local C files to be compiled with the standard and additional tgt flags
+ * and linked to generate the tgt hardware (<psdname>.psd.o) and simulation
+ * (<psdname>.tgt) executables.
+ */
+ADD_CFILES_TGT =
+
+
+/*
+ * Flags to be passed to the EPIC compiler in addition to the standard
+ * flags.  The standard flags cannot be overridden.
+ */
+ADD_EFLAGS = -z
+
+/*
+ * Additional directories to be specified in the include path for the EPIC
+ * compiler.  These will be carried over to be included in the c compilation line
+ * for the c files generated from the .e file.
+ */
+
+ADD_E_INCLUDES = -DEPIC_RELEASE_IS_$(RELEASE_NUM)x -I$(PARENT_DIR)/KSFoundation -I$(PARENT_DIR)/ksmodules
+
+/*
+ * Additional compiler flags to be passed to the C compiler when compiling a
+ * C source to be included in the host hardware executable.
+ * eg: -DMY_FLAG to define MYFLAG conditional compilation directive.
+ * Note that hardware and simulation compilation flags are specified independently.
+ * See ADD_CFLAGS_HS definition for the host sim counterpart.
+ */
+ADD_CFLAGS_HH =  -DEPIC_RELEASE=$(RELEASE_NUM) -DEPIC_PATCHNUM=$(PATCH_NUM) -DREV=\"$(GITREV)\" -I$(PARENT_DIR)/KSFoundation
+
+/*
+ * Additional compiler flags to be passed to the C compiler when compiling a
+ * C source to be included in the host simulation executable.
+ * eg: -DMY_FLAG to define MYFLAG conditional compilation directive.
+ * Note that hardware and simulation compilation flags are specified independently.
+ * See ADD_CFLAGS_HH definition for the host hw counterpart.
+ */
+ADD_CFLAGS_HS =  -DEPIC_RELEASE=$(RELEASE_NUM) -DEPIC_PATCHNUM=$(PATCH_NUM) -DREV=\"$(GITREV)\" -I$(PARENT_DIR)/KSFoundation
+
+/*
+ * Additional compiler flags to be passed to the C cross-compiler when compiling a
+ * C source to be included in the tgt hardware executable. (<psdname>.psd.o)
+ * eg: -DMY_FLAG to define MYFLAG conditional compilation directive.
+ * Note that hardware and simulation compilation flags are specified independently.
+ * See ADD_CFLAGS_TS definition for the tgt sim counterpart.
+ */
+ADD_CFLAGS_TH =  -DEPIC_RELEASE=$(RELEASE_NUM) -DEPIC_PATCHNUM=$(PATCH_NUM) -DREV=\"$(GITREV)\" -I$(PARENT_DIR)/KSFoundation
+
+/*
+ * Additional compiler flags to be passed to the C compiler when compiling a
+ * C source to be included in the tgt simulation executable. (<psdname>.tgt)
+ * eg: -DMY_FLAG to define MYFLAG conditional compilation directive.
+ * Note that hardware and simulation compilation flags are specified independently.
+ * See ADD_CFLAGS_TH definition for the tgt hardware counterpart.
+ */
+ADD_CFLAGS_TS =  -DEPIC_RELEASE=$(RELEASE_NUM) -DEPIC_PATCHNUM=$(PATCH_NUM) -DREV=\"$(GITREV)\" -I$(PARENT_DIR)/KSFoundation
+
+/*
+ * Additional flags to be passed to the linker when creating the host hw PSD.
+ * Note that hardware and simulation compilation flags are specified independently.
+ * See ADD_LINKFLAGS_HS definition for the host sim counterpart.
+ */
+ADD_LINKFLAGS_HH = -L$(PARENT_DIR)/KSFoundation/$(RELEASE_NUM)/host
+
+/*
+ * Additional flags to be passed to the linker when creating the host sim PSD.
+ * Note that hardware and simulation compilation flags are specified independently.
+ * See ADD_LINKFLAGS_HOST_HW definition for the host hw counterpart.
+ */
+ADD_LINKFLAGS_HS = -L$(PARENT_DIR)/KSFoundation/$(RELEASE_NUM)/sim_linux
+
+/*
+ * Additional flags to be passed to the linker when creating the tgt hw PSD object.
+ * Note that hardware and simulation compilation flags are specified independently.
+ * See ADD_LINKFLAGS_TGT_SIM definition for the tgt sim counterpart.
+ */
+ADD_LINKFLAGS_TH = -L$(PARENT_DIR)/KSFoundation/$(RELEASE_NUM)/$(TGT_DIR)
+
+/*
+ * Additional flags to be passed to the linker when creating the tgt sim PSD
+ * executable. (<psdname>.tgt)
+ * Note that hardware and simulation compilation flags are specified independently.
+ * See ADD_LINKFLAGS_TGT_HW definition for the tgt hw counterpart.
+ */
+ADD_LINKFLAGS_TS = -L$(PARENT_DIR)/KSFoundation/$(RELEASE_NUM)/sim_linux
+
+/*
+ * Additional local libraries to be passed to the linker when creating the host hw PSD.
+ */
+ADD_LIBS_HH = -lKSFoundation_hh
+
+/*
+ * Additional local libraries to be passed to the linker when creating the host sim PSD.
+ */
+ADD_LIBS_HS = -lKSFoundation_hs
+
+/*
+ * Additional local libraries to be passed to the linker when creating the tgt hw PSD.
+ */
+ADD_LIBS_TH = -lKSFoundation_th
+
+/*
+ * Additional local libraries to be passed to the linker when creating the tgt sim PSD.
+ */
+ADD_LIBS_TS = -lKSFoundation_ts
+
+
+
+
+/*
+ * This PSD is using Pulsegen on host. This rule pulls in
+ * the necessary compile/link flags and libraries to support
+ * this epic platform feature.
+ */
+UsePgenOnHost()
+
+
+/*
+ * Specify compilation Modes: PsdParameters rule define standard parameter
+ * definitions used during a PSD build. These parameters cannot be changed
+ * via Imakefile, but can be extended with more flags
+ */
+PsdParameters()
+
+
+/*
+ * Specify compilation Modes: BuildingEpicPsd() rule establishes the
+ * standard EPIC PSD build dependencies and compilation mechanisms.
+ */
+ifeq ($(SKIP_BUILD), FALSE)
+BuildingEpicPsd()
+endif
+
+/* End Imakefile */
+
+
+/* Force optimization and float-equal flags off */
+CFLAGS2_HS += -O0 -Wno-float-equal
+CFLAGS2_HH += -O0 -Wno-float-equal
+CFLAGS2_TS += -O0 -Wno-float-equal
+CFLAGS2_TH += -O0 -Wno-float-equal
